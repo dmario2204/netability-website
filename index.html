@@ -581,6 +581,102 @@ footer{background:var(--text);color:#fff;padding:3rem 2rem 2rem}
 .mobile-menu.open{display:flex}
 .mobile-menu .nav-link{padding:0.8rem 1rem;font-size:0.92rem;border-radius:9px}
 .mobile-menu .nav-cta{margin-top:1rem;padding:0.88rem;text-align:center;border-radius:9px;border:none;font-family:'DM Sans',sans-serif;font-size:0.92rem;font-weight:600}
+
+/* ══════════════════════════════════════════
+   OUR PARTNERS — Infinite scroll, grayscale
+══════════════════════════════════════════ */
+.partners{
+  background:#FFFFFF;
+  padding:5rem 0 4.5rem;
+  overflow:hidden;
+  border-top:1px solid var(--border);
+}
+.partners-header{
+  max-width:1200px;margin:0 auto;
+  padding:0 2rem;
+  text-align:center;
+  margin-bottom:3rem;
+}
+.partners-header h2{
+  font-family:'DM Sans',sans-serif;
+  font-size:2rem;font-weight:700;
+  letter-spacing:-0.025em;color:var(--text);
+  margin-bottom:0.6rem;
+}
+.partners-header p{
+  font-size:0.93rem;color:var(--slate);
+  max-width:520px;margin:0 auto;
+}
+
+/* Scrolling marquee wrapper */
+.marquee{
+  display:flex;
+  overflow:hidden;
+  user-select:none;
+  position:relative;
+  -webkit-mask-image:linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  mask-image:linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+}
+.marquee + .marquee{margin-top:1.5rem}
+
+.marquee-track{
+  display:flex;
+  gap:3rem;
+  flex-shrink:0;
+  align-items:center;
+  padding-right:3rem;
+  animation:scroll-left 50s linear infinite;
+}
+.marquee-track.reverse{animation:scroll-right 50s linear infinite}
+
+/* Pause animation on hover so visitors can read a logo */
+.marquee:hover .marquee-track{animation-play-state:paused}
+
+@keyframes scroll-left{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+@keyframes scroll-right{
+  from{transform:translateX(-50%)}
+  to{transform:translateX(0)}
+}
+
+/* Individual logo card */
+.partner-logo{
+  flex-shrink:0;
+  width:160px;
+  height:80px;
+  display:flex;align-items:center;justify-content:center;
+  background:#FAFAFA;
+  border:1.5px solid var(--border);
+  border-radius:12px;
+  padding:1rem 1.4rem;
+  transition:all 0.25s;
+}
+.partner-logo img{
+  max-width:100%;max-height:100%;
+  width:auto;height:auto;
+  object-fit:contain;
+  filter:grayscale(100%) brightness(0.5);
+  opacity:0.65;
+  transition:all 0.25s;
+}
+.partner-logo:hover{
+  border-color:var(--border2);
+  background:#fff;
+}
+.partner-logo:hover img{
+  filter:grayscale(0%) brightness(1);
+  opacity:1;
+}
+
+/* Responsive sizing */
+@media(max-width:680px){
+  .partner-logo{width:130px;height:65px;padding:0.8rem 1.1rem}
+  .marquee-track{gap:2rem;padding-right:2rem}
+  .partners-header h2{font-size:1.6rem}
+}
+
 </style>
 <script type="application/ld+json">
 {
@@ -969,8 +1065,76 @@ footer{background:var(--text);color:#fff;padding:3rem 2rem 2rem}
       <div class="trust-item"><strong>1 Partner</strong><p>Single point of contact for all your IT, security and compliance needs</p></div>
     </div>
   </section>
+  <!-- ── OUR PARTNERS ── -->
+  <section class="partners">
+    <div class="partners-header">
+      <h2>Our Partners</h2>
+      <p>The technology companies we work with to deliver excellence to our customers.</p>
+    </div>
 
-<footer>
+    <!-- Row 1 — scrolls LEFT — duplicate logos for seamless loop -->
+    <div class="marquee">
+      <div class="marquee-track">
+        <!-- Original logos -->
+        <div class="partner-logo"><img src="logos/microsoft.png" alt="Microsoft"></div>
+        <div class="partner-logo"><img src="logos/cisco.png" alt="Cisco"></div>
+        <div class="partner-logo"><img src="logos/paloalto.png" alt="Palo Alto Networks"></div>
+        <div class="partner-logo"><img src="logos/proxmox.png" alt="Proxmox"></div>
+        <div class="partner-logo"><img src="logos/purestorage.png" alt="Pure Storage"></div>
+        <div class="partner-logo"><img src="logos/avepoint.png" alt="AvePoint"></div>
+        <div class="partner-logo"><img src="logos/action1.png" alt="Action1"></div>
+        <div class="partner-logo"><img src="logos/proofpoint.png" alt="Proofpoint"></div>
+        <div class="partner-logo"><img src="logos/xmcyber.png" alt="XM Cyber"></div>
+        <div class="partner-logo"><img src="logos/minio.png" alt="MinIO"></div>
+        <div class="partner-logo"><img src="logos/jetpatch.png" alt="JetPatch"></div>
+        <!-- Duplicate for seamless infinite loop -->
+        <div class="partner-logo"><img src="logos/microsoft.png" alt="Microsoft"></div>
+        <div class="partner-logo"><img src="logos/cisco.png" alt="Cisco"></div>
+        <div class="partner-logo"><img src="logos/paloalto.png" alt="Palo Alto Networks"></div>
+        <div class="partner-logo"><img src="logos/proxmox.png" alt="Proxmox"></div>
+        <div class="partner-logo"><img src="logos/purestorage.png" alt="Pure Storage"></div>
+        <div class="partner-logo"><img src="logos/avepoint.png" alt="AvePoint"></div>
+        <div class="partner-logo"><img src="logos/action1.png" alt="Action1"></div>
+        <div class="partner-logo"><img src="logos/proofpoint.png" alt="Proofpoint"></div>
+        <div class="partner-logo"><img src="logos/xmcyber.png" alt="XM Cyber"></div>
+        <div class="partner-logo"><img src="logos/minio.png" alt="MinIO"></div>
+        <div class="partner-logo"><img src="logos/jetpatch.png" alt="JetPatch"></div>
+      </div>
+    </div>
+
+    <!-- Row 2 — scrolls RIGHT — different logos for variety -->
+    <div class="marquee">
+      <div class="marquee-track reverse">
+        <!-- Original logos -->
+        <div class="partner-logo"><img src="logos/veeam.png" alt="Veeam"></div>
+        <div class="partner-logo"><img src="logos/vmware.png" alt="VMware"></div>
+        <div class="partner-logo"><img src="logos/fortinet.png" alt="Fortinet"></div>
+        <div class="partner-logo"><img src="logos/nagios.png" alt="Nagios"></div>
+        <div class="partner-logo"><img src="logos/zeronetworks.png" alt="Zero Networks"></div>
+        <div class="partner-logo"><img src="logos/sentinelone.png" alt="SentinelOne"></div>
+        <div class="partner-logo"><img src="logos/crowdstrike.png" alt="CrowdStrike"></div>
+        <div class="partner-logo"><img src="logos/sophos.png" alt="Sophos"></div>
+        <div class="partner-logo"><img src="logos/aruba.png" alt="Aruba"></div>
+        <div class="partner-logo"><img src="logos/hpe.png" alt="HPE"></div>
+        <div class="partner-logo"><img src="logos/dell.png" alt="Dell"></div>
+        <!-- Duplicate for seamless infinite loop -->
+        <div class="partner-logo"><img src="logos/veeam.png" alt="Veeam"></div>
+        <div class="partner-logo"><img src="logos/vmware.png" alt="VMware"></div>
+        <div class="partner-logo"><img src="logos/fortinet.png" alt="Fortinet"></div>
+        <div class="partner-logo"><img src="logos/nagios.png" alt="Nagios"></div>
+        <div class="partner-logo"><img src="logos/zeronetworks.png" alt="Zero Networks"></div>
+        <div class="partner-logo"><img src="logos/sentinelone.png" alt="SentinelOne"></div>
+        <div class="partner-logo"><img src="logos/crowdstrike.png" alt="CrowdStrike"></div>
+        <div class="partner-logo"><img src="logos/sophos.png" alt="Sophos"></div>
+        <div class="partner-logo"><img src="logos/aruba.png" alt="Aruba"></div>
+        <div class="partner-logo"><img src="logos/hpe.png" alt="HPE"></div>
+        <div class="partner-logo"><img src="logos/dell.png" alt="Dell"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
     <div class="footer-inner">
       <div class="footer-top">
         <div><div class="footer-logo"><img id="logo-footer" src="" alt="Netability"></div><p class="footer-desc">Swiss-born IT services company with offices in Singapore and Hong Kong. Specialists in MAS TRM compliance, Microsoft cloud, cybersecurity and managed IT since 2003.</p></div>
