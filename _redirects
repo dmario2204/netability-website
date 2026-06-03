@@ -1,0 +1,6 @@
+# Cloudflare Pages — redirects
+# Redirect www to non-www (or vice versa — pick one canonical)
+https://www.netability.sg/* https://www.netability.sg/:splat 200
+
+# Ensure the Netlify URL redirects to the real domain (once live)
+# https://fantastic-zabaione-9ae906.netlify.app/* https://www.netability.sg/:splat 301

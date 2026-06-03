@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Netability Singapore — Swiss IT Specialists Since 2003</title>
+<meta name="description" content="Netability is a Swiss-born system integrator founded in 2003 with offices in Singapore, Switzerland and Hong Kong. Over 20 years of expertise in cybersecurity, cloud, MAS compliance and managed IT services across Asia-Pacific.">
+<meta name="keywords" content="about Netability Singapore, Swiss IT company Singapore, IT system integrator Singapore, Netability founders, MAS TRM IT specialists Singapore">
+<meta property="og:site_name" content="Netability Singapore">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.netability.sg/about.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.netability.sg/about.html">
+<meta property="og:title" content="About Netability Singapore — Swiss IT Specialists Since 2003">
+<meta property="og:description" content="Netability is a Swiss-born system integrator founded in 2003 with offices in Singapore, Switzerland and Hong Kong. Over 20 years of expertise in cybersecurity, cloud, MAS compliance and managed IT services across Asia-Pacific.">
+<meta property="og:locale" content="en_SG">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About Netability Singapore — Swiss IT Specialists Since 2003">
+<meta name="twitter:description" content="Netability is a Swiss-born system integrator founded in 2003 with offices in Singapore, Switzerland and Hong Kong. Over 20 years of expertise in cybersecurity, cloud, MAS compliance and managed IT services across Asia-Pacific.">
+<meta name="geo.region" content="SG">
+<meta name="geo.placename" content="Singapore">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  /* ── Netability brand colours ── */
+  --brand:#3530BE;          /* deep indigo — logo outline / primary action */
+  --brand2:#2A25A0;         /* darker indigo — hover */
+  --brand3:#4B46D4;         /* mid indigo — links, accents */
+  --brand-dim:rgba(53,48,190,0.08);
+  --brand-dim2:rgba(53,48,190,0.15);
+
+  /* sky-to-violet gradient — from SFONDO_06 */
+  --grad-start:#A8D8F0;     /* sky blue */
+  --grad-mid:#C5B8F2;       /* lavender */
+  --grad-end:#7B6FE8;       /* violet */
+
+  /* neutrals */
+  --bg:#F5F5F7;           /* Apple-style off-white */
+  --bg2:#EDEDF2;            /* light grey surface */
+  --bg3:#E6E7EF;            /* slightly deeper grey tint */
+  --text:#0A0A14;           /* near-black */
+  --text2:#3D4055;          /* dark slate */
+  --slate:#6B7190;
+  --border:#E2E4EE;
+  --border2:#C8CCDE;
+
+  /* solution accent colours — all built around the brand palette */
+  --c1:#3530BE; --c1d:rgba(53,48,190,0.09);   /* Microsoft — brand indigo */
+  --c2:#1A5FAD; --c2d:rgba(26,95,173,0.09);   /* MAS — deep blue */
+  --c3:#6B35BE; --c3d:rgba(107,53,190,0.09);  /* Voice — purple */
+  --c4:#1A96C4; --c4d:rgba(26,150,196,0.09);  /* Nagios — sky blue */
+  --c5:#C43530; --c5d:rgba(196,53,48,0.09);   /* Cyber — red */
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,0.97);border-bottom:1px solid var(--border);backdrop-filter:blur(10px)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:68px;gap:1rem}
+.nav-logo{cursor:pointer;display:flex;align-items:center;flex-shrink:0}
+.nav-logo img{height:30px;width:auto}
+.nav-links{display:flex;align-items:center;gap:0.1rem;flex-wrap:nowrap}
+.nav-link{font-size:0.76rem;font-weight:500;padding:0.42rem 0.6rem;border-radius:6px;cursor:pointer;color:var(--text2);transition:all 0.15s;white-space:nowrap}
+.nav-link:hover{background:var(--bg2);color:var(--brand)}
+.nav-link.active{color:var(--brand);background:var(--brand-dim);font-weight:600}
+.nav-cta{background:var(--brand);color:#fff;font-size:0.8rem;font-weight:600;padding:0.5rem 1.1rem;border-radius:7px;cursor:pointer;transition:background 0.2s;white-space:nowrap;border:none;font-family:'DM Sans',sans-serif;flex-shrink:0}
+.nav-cta:hover{background:var(--brand2)}
+.hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:20px;height:2px;background:var(--text);border-radius:2px}
+
+/* ── PAGES ── */
+.page{display:none;min-height:100vh;padding-top:68px}
+.page.active{display:block}
+
+
+/* ══════════════════════════════════════════
+   HERO — PURPLE GRADIENT
+══════════════════════════════════════════ */
+.hero{
+  position:relative;overflow:hidden;
+  padding:5.5rem 2rem 5rem;
+  background:#1A0A2E;  /* deep purple base */
+  /* layered radial gradient giving depth */
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 30%, rgba(123,97,255,0.45) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 20% 80%, rgba(107,53,190,0.35) 0%, transparent 55%),
+    radial-gradient(ellipse 100% 100% at 50% 50%, #1A0A2E 30%, #0D0620 100%);
+}
+.hero-blob{position:absolute;border-radius:50%;filter:blur(72px);pointer-events:none;animation:blob-float 8s ease-in-out infinite}
+.hero-blob1{width:600px;height:500px;top:-100px;right:-80px;background:radial-gradient(circle,rgba(107,53,190,0.5),rgba(75,70,212,0.25) 50%,transparent 70%);animation-delay:0s}
+.hero-blob2{width:450px;height:400px;bottom:-80px;left:-60px;background:radial-gradient(circle,rgba(53,48,190,0.4),rgba(123,97,255,0.2) 50%,transparent 70%);animation-delay:-3s}
+.hero-blob3{width:350px;height:300px;top:40%;left:35%;background:radial-gradient(circle,rgba(197,184,242,0.15),transparent 65%);animation-delay:-5s}
+@keyframes blob-float{
+  0%,100%{transform:translate(0,0) scale(1)}
+  33%{transform:translate(18px,-22px) scale(1.04)}
+  66%{transform:translate(-12px,14px) scale(0.97)}
+}
+/* subtle noise texture overlay */
+.hero-noise{position:absolute;inset:0;opacity:0.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");pointer-events:none}
+
+.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 400px;gap:4rem;align-items:center;position:relative;z-index:1}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:100px;padding:0.3rem 0.9rem;font-size:0.73rem;font-weight:600;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.4rem;backdrop-filter:blur(4px)}
+.hero-eyebrow-dot{width:6px;height:6px;border-radius:50%;background:#C5B8F2;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.2}}
+.hero h1{font-family:'DM Sans',sans-serif;font-size:3.1rem;line-height:1.1;letter-spacing:-0.025em;margin-bottom:1.4rem;color:#fff;font-weight:700}
+.hero h1 em{font-style:italic;background:linear-gradient(90deg,#C5B8F2,#A8D8F0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:0.97rem;color:rgba(255,255,255,0.6);line-height:1.75;max-width:500px;margin-bottom:2.5rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:linear-gradient(135deg,#5B4FCF,#3530BE);color:#fff;font-weight:600;font-size:0.88rem;padding:0.8rem 1.8rem;border-radius:8px;cursor:pointer;border:none;font-family:'DM Sans',sans-serif;transition:all 0.2s;letter-spacing:0.01em;box-shadow:0 4px 18px rgba(91,79,207,0.45)}
+.btn-primary:hover{background:linear-gradient(135deg,#6B5FDF,#4540CE);transform:translateY(-1px);box-shadow:0 6px 24px rgba(91,79,207,0.55)}
+.btn-ghost{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.85);font-weight:500;font-size:0.88rem;padding:0.8rem 1.8rem;border-radius:8px;cursor:pointer;border:1.5px solid rgba(255,255,255,0.2);font-family:'DM Sans',sans-serif;transition:all 0.2s;backdrop-filter:blur(4px)}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.45);background:rgba(255,255,255,0.12)}
+.hero-stats{display:flex;gap:2.5rem;margin-top:3rem;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,0.1)}
+.h-stat strong{display:block;font-family:'DM Sans',sans-serif;font-size:1.7rem;font-weight:600;color:#fff;letter-spacing:-0.01em}
+.h-stat span{font-size:0.72rem;color:rgba(255,255,255,0.42);text-transform:uppercase;letter-spacing:0.06em}
+
+/* ══════════════════════════════════════════
+   SOLUTIONS — BENTO GRID
+══════════════════════════════════════════ */
+.solutions-overview{max-width:1200px;margin:0 auto;padding:5rem 2rem}
+
+.sols-header .section-sub{max-width:460px;margin-bottom:0}
+
+/* Bento grid — asymmetric editorial layout */
+.bento-grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  grid-template-rows:auto auto;
+  gap:1.2rem;
+}
+/* Card 1 — feature card, left 7 cols */
+.bento-card:nth-child(1){grid-column:1 / 8;grid-row:1}
+/* Card 2 — MAS tall, right 5 cols spanning both rows */
+.bento-card:nth-child(2){grid-column:8 / 13;grid-row:1 / 3}
+/* Bottom row wrapper */
+.bento-bottom-row{grid-column:1 / 8;grid-row:2}
+/* Card 5 — Cyber — spans 4/12, row 2 — but MAS takes 8-13, so 5 takes a different approach */
+/* Recalculate: grid is 12 cols. Row 2: col 1-4 (voice), 5-8 (nagios) — but MAS is col 8-13.
+   So cyber can only go in cols that are free in row 2: cols 1-7 (MAS takes 8-12).
+   Let's make it: voice=1-4, nagios=4-7, cyber=7-8... no.
+   Better: MAS spans rows 1+2 at col 8-13. Bottom row free cols: 1-7 split 3 cards.
+   Voice: 1-4, Nagios: 4-8, Cyber: but col 8 is taken by MAS (col 8-13).
+   Fix: MAS = col 8/13. Bottom row 3 cards in 7 cols: uneven but workable.
+   Voice 1/4, Nagios 4/7, Cyber … needs to be outside MAS.
+   Actually MAS ends at col 13 (exclusive), so col 8 is START of MAS.
+   Bottom cols 1-7 = 3 cards. Let's do: 1/4, 4/7 = only 2 cards + Cyber needs its own slot.
+   SOLUTION: make MAS only span 4 cols (col 9-13), giving bottom row 8 free cols:
+   voice 1/4, nagios 4/7, cyber 7/10... but MAS starts at 9.
+   CLEANER SOLUTION: 
+   Top row: card1 1/7 (6 wide), card2 7/13 (6 wide, tall)
+   Bottom row: card3 1/5 (4 wide), card4 5/9 (4 wide), card5 9/13 — but card2 occupies 7-13 already!
+   
+   FINAL SOLUTION: 
+   card1: col 1/8 row 1 (7 wide)
+   card2: col 8/13 row 1/3 (5 wide, 2 rows)
+   card3: col 1/4 row 2 (3 wide)
+   card4: col 4/6 row 2 (... this wont work well) 
+   
+   Let me try 3-column approach for bottom: 7 free cols / 3 = ~2.3 each. Use 2+3+2=7.
+   card3: 1/3, card4: 3/6, card5: 6/8 - very narrow.
+   
+   BEST: use unequal: card3 1/3 (2), card4 3/6 (3), card5 6/8 (2)... too narrow.
+   
+   NEW APPROACH: 
+   card1: 1/7 row1 (wide feature)
+   card2: 7/13 rows 1/3 (tall)  
+   card3+4+5 share cols 1/7 in row 2 — three equal cards at ~2.3 cols each.
+   Use: card3 1/4 (3), card4 4/6 (2 — too thin), card5 6/8 (2 — too thin).
+   
+   Actually JUST USE row 2 with smaller cards, 3 across 7 cols is 2.3 each, not great.
+   
+   PERFECT FIX: flip MAS width. MAS = cols 1/5 (rows 1/3), Feature card = cols 5/13 row 1.
+   Bottom: 3 cards from col 5/13 = 8 cols / 3 ≈ 2.7 — still awkward.
+   
+   DEFINITIVE: 10-column grid. Card1: 1/7 row1. Card2: 7/11 rows 1/3. Bottom: 3 cards col 1/7 → 2+2+3.
+   
+   Just do 3 equal bottom cards in cols 1-7: 1/3, 3/5, 5/8 — no that''s 2+2+3.
+   Actually simplest: bottom row 3 EQUAL cards in 7 cols isn''t cleanly divisible.
+   
+   USE: card3 1/3 (2), card4 3/5 (2), card5 5/8 (3). Messy. 
+   
+   DEFINITIVE SOLUTION: Don''t use sub-column. Just use a simple 3-column sub-grid for row 2 cols 1-7.
+   Since CSS grid doesn''t easily support this, just make them flow with explicit widths.
+   
+   USE: Row 2 full width but left of MAS = CSS grid cols 1/8 with 3 auto cards inside.
+*/
+
+/* Simpler clean approach using subgrid-like inner flex */
+.bento-bottom-row{
+  grid-column:1/8;
+  grid-row:2;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.2rem;
+}
+
+.bento-card{
+  background:#FAFAFA;
+  border:1.5px solid var(--border);
+  border-radius:16px;
+  overflow:hidden;
+  cursor:pointer;
+  position:relative;
+  transition:transform 0.25s,box-shadow 0.25s,border-color 0.25s;
+  display:flex;flex-direction:column;
+}
+.bento-card:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(0,0,0,0.1);border-color:var(--border2)}
+
+.bento-inner{padding:1.8rem;flex:1;display:flex;flex-direction:column;gap:0;position:relative;z-index:1}
+.bento-glow{position:absolute;inset:0;opacity:0;transition:opacity 0.3s;pointer-events:none;border-radius:16px}
+.bento-card:hover .bento-glow{opacity:1}
+
+.bento-label{font-size:0.68rem;font-weight:700;color:rgba(0,0,0,0.18);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.6rem;font-family:'DM Sans',sans-serif}
+.bento-seg{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;padding:0.2rem 0.65rem;border-radius:100px;display:inline-block;margin-bottom:1.1rem;align-self:flex-start}
+.bento-seg-urgent{animation:pulse-badge 2.5s ease-in-out infinite}
+.bento-seg-urgent2{animation:pulse-badge2 2.5s ease-in-out infinite}
+@keyframes pulse-badge{0%,100%{box-shadow:0 0 0 0 rgba(26,95,173,0.3)}50%{box-shadow:0 0 0 6px rgba(26,95,173,0)}}
+@keyframes pulse-badge2{0%,100%{box-shadow:0 0 0 0 rgba(107,53,190,0.3)}50%{box-shadow:0 0 0 6px rgba(107,53,190,0)}}
+
+.bento-icon-wrap{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem;flex-shrink:0}
+.bento-icon{width:24px;height:24px;stroke-width:1.6}
+.bento-title{font-family:'DM Sans',sans-serif;font-size:1.2rem;font-weight:700;letter-spacing:-0.02em;letter-spacing:-0.01em;line-height:1.25;margin-bottom:0.7rem;color:var(--text)}
+.bento-desc{font-size:0.82rem;color:var(--slate);line-height:1.6;flex:1;margin-bottom:1.1rem}
+.bento-tags{display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:1.2rem}
+.bento-tags span{font-size:0.68rem;font-weight:600;padding:0.18rem 0.55rem;border-radius:100px;letter-spacing:0.02em}
+.bento-cta{display:inline-flex;align-items:center;gap:6px;font-size:0.8rem;font-weight:600;transition:gap 0.2s;margin-top:auto}
+.bento-card:hover .bento-cta{gap:10px}
+
+
+
+
+
+/* Responsive bento */
+@media(max-width:1060px){
+  .bento-grid{grid-template-columns:1fr 1fr}
+  .bento-card:nth-child(1){grid-column:1/2;grid-row:auto}
+  .bento-card:nth-child(2){grid-column:2/3;grid-row:auto}
+  .bento-bottom-row{grid-column:1/3;grid-row:auto;grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:680px){
+  .bento-grid{grid-template-columns:1fr}
+  .bento-card:nth-child(1),.bento-card:nth-child(2){grid-column:1/2}
+  .bento-bottom-row{grid-column:1/2;grid-template-columns:1fr}
+  
+  .hero-inner{grid-template-columns:1fr}
+}
+
+/* ── LEAD CARD ── */
+.lead-card{background:#FAFAFA;border-radius:14px;padding:2rem;box-shadow:0 20px 60px rgba(0,0,0,0.28);border:1px solid rgba(255,255,255,0.15)}
+.lead-card-top{height:4px;border-radius:14px 14px 0 0;margin:-2rem -2rem 1.4rem;background:linear-gradient(90deg,var(--brand),var(--grad-end),var(--grad-mid))}
+.lead-card h3{font-family:'DM Sans',sans-serif;font-size:1.15rem;color:var(--text);margin-bottom:0.3rem;font-weight:700;letter-spacing:-0.01em}
+.lead-card .sub{font-size:0.81rem;color:var(--slate);margin-bottom:1.3rem}
+.form-group{margin-bottom:0.85rem}
+.form-group label{display:block;font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--slate);margin-bottom:0.32rem}
+.form-group input,.form-group select{width:100%;background:var(--bg2);border:1.5px solid var(--border);border-radius:7px;padding:0.62rem 0.85rem;font-size:0.86rem;font-family:'DM Sans',sans-serif;color:var(--text);outline:none;transition:border-color 0.2s}
+.form-group input:focus,.form-group select:focus{border-color:var(--brand)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.65rem}
+.submit-btn{width:100%;background:var(--brand);color:#fff;font-weight:700;padding:0.82rem;border-radius:8px;border:none;font-size:0.88rem;cursor:pointer;font-family:'DM Sans',sans-serif;margin-top:0.4rem;transition:background 0.2s}
+.submit-btn:hover{background:var(--brand2)}
+.form-note{text-align:center;font-size:0.7rem;color:var(--slate);margin-top:0.65rem}
+
+/* ── SOLUTIONS GRID ── */
+.solutions-overview{max-width:1200px;margin:0 auto;padding:5rem 2rem}
+.section-eye{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--brand);margin-bottom:0.6rem}
+.section-title{font-family:'DM Sans',sans-serif;font-size:2.1rem;font-weight:700;letter-spacing:-0.025em;margin-bottom:0.8rem;color:var(--text)}
+.section-sub{font-size:0.93rem;color:var(--slate);max-width:560px;line-height:1.7;margin-bottom:3rem}
+.sol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.sol-thumb{background:#FAFAFA;border:1.5px solid var(--border);border-radius:12px;padding:1.5rem;cursor:pointer;transition:all 0.2s;position:relative;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+.sol-thumb:hover{border-color:var(--border2);transform:translateY(-3px);box-shadow:0 12px 32px rgba(53,48,190,0.12)}
+.sol-accent{position:absolute;top:0;left:0;right:0;height:3px;border-radius:12px 12px 0 0}
+.sol-thumb-icon{width:42px;height:42px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;margin-bottom:0.9rem}
+.sol-seg{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:0.2rem 0.55rem;border-radius:100px;margin-bottom:0.65rem;display:inline-block}
+.sol-thumb h4{font-size:0.93rem;font-weight:600;color:var(--text);margin-bottom:0.45rem;line-height:1.35}
+.sol-thumb p{font-size:0.8rem;color:var(--slate);line-height:1.55}
+.sol-learn{display:inline-flex;align-items:center;gap:4px;font-size:0.77rem;font-weight:600;margin-top:0.9rem;transition:gap 0.15s}
+.sol-thumb:hover .sol-learn{gap:8px}
+
+
+/* ══════════════════════════════════════════
+   PRACTICES — CUBIC BLOCK DESIGN
+══════════════════════════════════════════ */
+.practices{max-width:1200px;margin:0 auto;padding:5.5rem 2rem 4rem}
+.practices-header{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:end;margin-bottom:3.5rem}
+.practices-header .section-sub{max-width:440px;line-height:1.7;margin-bottom:0}
+
+/* 5-column grid — equal cubic tiles */
+.cubic-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:0;
+  border:2px solid var(--border2);
+  border-radius:18px;
+  overflow:hidden;
+}
+
+/* Each card — a cube tile */
+.cubic-card{
+  position:relative;
+  padding:2rem 1.6rem 1.8rem;
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  cursor:pointer;
+  background:#FAFAFA;
+  border-right:1.5px solid var(--border);
+  transition:background 0.22s, transform 0.22s;
+  overflow:hidden;
+  min-height:400px;
+}
+.cubic-card:last-child{border-right:none}
+
+/* Hover lift with colour flood */
+.cubic-card::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transition:opacity 0.25s;
+  pointer-events:none;
+}
+.cubic-card:hover::before{opacity:1}
+.cubic-card:hover .cc-number{opacity:1}
+.cubic-card:hover .cc-arrow{opacity:1;transform:translate(0,0)}
+.cubic-card:hover .cc-title{color:#fff}
+.cubic-card:hover .cc-desc{color:rgba(255,255,255,0.7)}
+.cubic-card:hover .cc-icon-box{background:rgba(255,255,255,0.15)}
+.cubic-card:hover .cc-icon{stroke:#fff}
+.cubic-card:hover .cc-seg{background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.9)}
+.cubic-card:hover .cc-pills li{background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.85);border-color:rgba(255,255,255,0.2)}
+.cubic-card:hover .cc-urgent-flag{background:rgba(255,255,255,0.15);color:#fff;border-color:rgba(255,255,255,0.25)}
+
+/* Per-card hover colour */
+.cc-1::before{background:linear-gradient(160deg,#3530BE,#4B46D4)}
+.cc-2::before{background:linear-gradient(160deg,#1A5FAD,#2474CC)}
+.cc-3::before{background:linear-gradient(160deg,#6B35BE,#8A50D8)}
+.cc-4::before{background:linear-gradient(160deg,#1A96C4,#22B0E0)}
+.cc-5::before{background:linear-gradient(160deg,#C43530,#E04540)}
+
+/* Card edge accent — 4px top bar */
+.cc-edge{
+  position:absolute;top:0;left:0;right:0;height:4px;
+  transition:height 0.25s;
+}
+.cc-1 .cc-edge{background:var(--c1)}
+.cc-2 .cc-edge{background:var(--c2)}
+.cc-3 .cc-edge{background:var(--c3)}
+.cc-4 .cc-edge{background:var(--c4)}
+.cc-5 .cc-edge{background:var(--c5)}
+.cubic-card:hover .cc-edge{height:0}
+
+/* Large bg number */
+.cc-number{
+  position:absolute;top:1.2rem;right:1.3rem;
+  font-family:'DM Sans',sans-serif;
+  font-size:4rem;font-weight:800;letter-spacing:-0.03em;
+  color:rgba(0,0,0,0.05);
+  line-height:1;
+  transition:color 0.25s,opacity 0.25s;
+  pointer-events:none;
+  user-select:none;
+}
+.cubic-card:hover .cc-number{color:rgba(255,255,255,0.08)}
+
+/* Urgent flag */
+.cc-urgent-flag{
+  display:inline-flex;align-items:center;
+  font-size:0.68rem;font-weight:700;
+  padding:0.22rem 0.65rem;border-radius:100px;
+  border:1px solid var(--border);
+  color:var(--slate);background:var(--bg3);
+  margin-bottom:1rem;align-self:flex-start;
+  transition:all 0.25s;
+}
+.cc-urgent-hot{border-color:rgba(196,53,48,0.3);color:var(--c5);background:rgba(196,53,48,0.07)}
+
+/* Icon box */
+.cc-icon-box{
+  width:46px;height:46px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:1.1rem;flex-shrink:0;
+  transition:background 0.25s;
+}
+.cc-1 .cc-icon-box{background:var(--c1d)}
+.cc-2 .cc-icon-box{background:var(--c2d)}
+.cc-3 .cc-icon-box{background:var(--c3d)}
+.cc-4 .cc-icon-box{background:var(--c4d)}
+.cc-5 .cc-icon-box{background:var(--c5d)}
+.cc-icon{width:22px;height:22px;stroke-width:1.6;transition:stroke 0.25s}
+.cc-1 .cc-icon{stroke:var(--c1)}
+.cc-2 .cc-icon{stroke:var(--c2)}
+.cc-3 .cc-icon{stroke:var(--c3)}
+.cc-4 .cc-icon{stroke:var(--c4)}
+.cc-5 .cc-icon{stroke:var(--c5)}
+
+/* Segment badge */
+.cc-seg{
+  display:inline-block;
+  font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;
+  padding:0.18rem 0.6rem;border-radius:100px;
+  margin-bottom:0.8rem;align-self:flex-start;
+  transition:all 0.25s;
+}
+.cc-1 .cc-seg{background:var(--c1d);color:var(--c1)}
+.cc-2 .cc-seg{background:var(--c2d);color:var(--c2)}
+.cc-3 .cc-seg{background:var(--c3d);color:var(--c3)}
+.cc-4 .cc-seg{background:var(--c4d);color:var(--c4)}
+.cc-5 .cc-seg{background:var(--c5d);color:var(--c5)}
+
+/* Title & desc */
+.cc-body{display:flex;flex-direction:column;flex:1;position:relative;z-index:1}
+.cc-title{
+  font-family:'DM Sans',sans-serif;
+  font-size:1.05rem;font-weight:700;
+  letter-spacing:-0.015em;line-height:1.3;
+  margin-bottom:0.7rem;color:var(--text);
+  transition:color 0.25s;
+}
+.cc-desc{
+  font-size:0.78rem;color:var(--slate);
+  line-height:1.6;flex:1;
+  margin-bottom:0.9rem;
+  transition:color 0.25s;
+}
+
+/* Pills */
+.cc-pills{
+  list-style:none;display:flex;flex-direction:column;gap:0.35rem;
+  margin-top:auto;
+}
+.cc-pills li{
+  font-size:0.7rem;font-weight:500;
+  padding:0.22rem 0.6rem;
+  border-radius:6px;
+  border:1px solid var(--border);
+  color:var(--slate);
+  background:var(--bg2);
+  display:inline-block;align-self:flex-start;
+  transition:all 0.25s;
+}
+
+/* Arrow */
+.cc-arrow{
+  position:absolute;bottom:1.4rem;right:1.4rem;
+  opacity:0;transform:translate(-4px,4px);
+  transition:all 0.25s;
+  z-index:2;
+}
+.cc-arrow .licon{width:18px;height:18px;stroke:#fff;stroke-width:2}
+
+/* ── Responsive cubic ── */
+@media(max-width:1060px){
+  .cubic-grid{grid-template-columns:repeat(3,1fr)}
+  .cubic-card:nth-child(3){border-right:none}
+  .cubic-card{min-height:360px}
+  .practices-header{grid-template-columns:1fr}
+}
+@media(max-width:680px){
+  .cubic-grid{grid-template-columns:1fr 1fr}
+  .cubic-card:nth-child(2n){border-right:none}
+  .cubic-card{min-height:320px;border-bottom:1.5px solid var(--border)}
+  .cubic-card:last-child{grid-column:1/3;border-bottom:none}
+}
+@media(max-width:420px){
+  .cubic-grid{grid-template-columns:1fr}
+  .cubic-card{border-right:none;min-height:auto}
+  .cubic-card:last-child{grid-column:auto}
+}
+
+/* ── TRUST BAR ── */
+.trust-bar{background:var(--bg3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:3rem 2rem}
+.trust-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center}
+.trust-item strong{display:block;font-family:'DM Sans',sans-serif;font-size:2rem;font-weight:700;color:var(--brand);margin-bottom:0.25rem;letter-spacing:-0.01em}
+.trust-item p{font-size:0.8rem;color:var(--slate);line-height:1.5}
+
+/* ── INNER PAGE ── */
+.page-hero{padding:3.5rem 2rem 3rem;background:var(--text);position:relative;overflow:hidden}
+.page-hero-grad{position:absolute;top:0;right:0;bottom:0;width:40%;pointer-events:none;opacity:0.12}
+.page-hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1}
+.back-btn{display:inline-flex;align-items:center;gap:6px;font-size:0.76rem;color:rgba(255,255,255,0.45);cursor:pointer;margin-bottom:1.4rem;transition:color 0.2s;background:none;border:none;font-family:'DM Sans',sans-serif}
+.back-btn:hover{color:rgba(255,255,255,0.85)}
+.back-btn::before{content:'←'}
+.page-badge{display:inline-flex;align-items:center;gap:7px;border-radius:100px;padding:0.26rem 0.78rem;font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.9rem}
+.urgency-flag{display:inline-flex;align-items:center;gap:6px;border-radius:6px;padding:0.32rem 0.75rem;font-size:0.73rem;font-weight:700;margin-bottom:0.9rem}
+.page-hero h1{font-family:'DM Sans',sans-serif;font-size:2.5rem;font-weight:700;letter-spacing:-0.025em;line-height:1.1;margin-bottom:1rem;color:#fff}
+.page-hero h1 em{font-style:italic}
+.page-hero .tagline{font-size:0.96rem;color:rgba(255,255,255,0.55);max-width:640px;line-height:1.65}
+
+/* ── DETAIL ── */
+.inner-page{max-width:1200px;margin:0 auto;padding:3rem 2rem 5rem}
+.detail-grid{display:grid;grid-template-columns:1fr 320px;gap:2.5rem;align-items:start}
+.detail-intro{font-size:0.93rem;color:var(--text2);line-height:1.8;margin-bottom:2rem;padding:1.5rem;background:var(--bg2);border-radius:10px;border-left:3px solid var(--brand)}
+.feat-list{display:flex;flex-direction:column;gap:0.9rem}
+.feat{display:flex;gap:1rem;align-items:flex-start;padding:1.2rem;background:#FAFAFA;border:1.5px solid var(--border);border-radius:11px;transition:all 0.2s;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+.feat:hover{border-color:var(--border2)}
+.feat-ico{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.95rem;flex-shrink:0;margin-top:1px}
+.feat h5{font-size:0.87rem;font-weight:600;color:var(--text);margin-bottom:0.28rem}
+.feat p{font-size:0.8rem;color:var(--slate);line-height:1.55}
+.feat-sub{margin-top:0.45rem;display:flex;flex-direction:column;gap:0.2rem}
+.feat-sub-i{font-size:0.76rem;color:var(--slate);display:flex;gap:0.4rem;line-height:1.4}
+.feat-sub-i::before{content:'→';flex-shrink:0;opacity:0.35}
+
+/* ── SIDEBAR ── */
+.sidebar{position:sticky;top:86px;display:flex;flex-direction:column;gap:1.1rem}
+.sb-cta{border-radius:12px;padding:1.4rem}
+.sb-cta h4{font-size:0.95rem;font-weight:700;margin-bottom:0.55rem}
+.sb-cta p{font-size:0.8rem;line-height:1.6;margin-bottom:1rem}
+.sb-cta a{display:block;text-align:center;font-weight:700;font-size:0.82rem;padding:0.62rem;border-radius:8px;cursor:pointer;transition:opacity 0.2s;text-decoration:none}
+.sb-cta a:hover{opacity:0.85}
+.sb-targets{background:#FAFAFA;border:1.5px solid var(--border);border-radius:12px;padding:1.1rem}
+.sb-targets h4{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--slate);margin-bottom:0.8rem}
+.tgt-tag{display:inline-block;font-size:0.7rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:100px;margin:0.18rem;letter-spacing:0.01em}
+
+/* ── INFO BLOCKS ── */
+.info-block{border-radius:10px;padding:1.2rem 1.3rem;margin-top:0.7rem}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin:0.8rem 0}
+.info-card{background:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.9);border-radius:8px;padding:0.65rem 0.75rem}
+.info-card-label{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:0.2rem}
+.info-card-val{font-size:0.78rem;color:var(--text2);line-height:1.4}
+.pill-row{display:flex;flex-wrap:wrap;gap:0.38rem;margin-top:0.65rem}
+.mini-pill{border-radius:100px;padding:0.18rem 0.58rem;font-size:0.69rem;font-weight:500}
+.info-note{font-size:0.71rem;margin-top:0.65rem;line-height:1.5;font-style:italic;color:var(--slate)}
+.prop-badge{border-radius:4px;padding:0.16rem 0.5rem;font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;vertical-align:middle;margin-left:0.4rem}
+
+/* ── RETENTION TABLE ── */
+.ret-tbl{width:100%;border-collapse:collapse;font-size:0.77rem;margin-top:0.65rem}
+.ret-tbl th{text-align:left;padding:0.38rem 0.5rem;font-weight:600;color:var(--slate);border-bottom:1.5px solid var(--border)}
+.ret-tbl td{padding:0.38rem 0.5rem;border-bottom:1px solid var(--border);line-height:1.4;color:var(--text2)}
+.ret-tbl td:last-child{font-weight:600;white-space:nowrap;color:var(--brand)}
+
+/* ── CONTACT ── */
+.contact-wrap{max-width:1200px;margin:0 auto;padding:4rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.contact-info h2{font-family:'DM Sans',sans-serif;font-size:1.9rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:0.9rem;letter-spacing:-0.01em}
+.contact-info p{color:var(--slate);line-height:1.75;margin-bottom:2rem;font-size:0.92rem}
+.c-items{display:flex;flex-direction:column;gap:1rem}
+.c-item{display:flex;gap:1rem;align-items:flex-start}
+.c-ico{width:38px;height:38px;background:var(--brand-dim);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem}
+.c-text strong{display:block;font-size:0.83rem;font-weight:600;margin-bottom:0.1rem}
+.c-text span{font-size:0.8rem;color:var(--slate)}
+.contact-form{background:#FAFAFA;border:1.5px solid var(--border);border-radius:14px;padding:2rem}
+.contact-form h3{font-family:'DM Sans',sans-serif;font-size:1.2rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:1.4rem}
+
+/* ── FOOTER ── */
+footer{background:var(--text);color:#fff;padding:3rem 2rem 2rem}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.footer-logo img{height:26px;width:auto;filter:invert(1) brightness(3);margin-bottom:1rem}
+.footer-desc{font-size:0.8rem;color:rgba(255,255,255,0.42);line-height:1.7;max-width:260px}
+.footer-col h5{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.35);margin-bottom:0.9rem}
+.footer-col a{display:block;font-size:0.8rem;color:rgba(255,255,255,0.55);margin-bottom:0.55rem;cursor:pointer;transition:color 0.2s;text-decoration:none}
+.footer-col a:hover{color:#fff}
+.footer-divider{border:none;border-top:1px solid rgba(255,255,255,0.07);margin-bottom:1.4rem}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:0.73rem;color:rgba(255,255,255,0.28)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1060px){
+  .hero-inner{grid-template-columns:1fr}
+  .lead-card{display:none}
+  .sol-grid{grid-template-columns:1fr 1fr}
+  .trust-inner{grid-template-columns:1fr 1fr;gap:1.5rem}
+  .detail-grid{grid-template-columns:1fr}
+  .sidebar{position:static}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .contact-wrap{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .info-grid{grid-template-columns:1fr}
+}
+@media(max-width:580px){
+  .sol-grid{grid-template-columns:1fr}
+  .trust-inner{grid-template-columns:1fr 1fr}
+  .footer-top{grid-template-columns:1fr}
+  .hero h1{font-size:2.3rem}
+  .page-hero h1{font-size:1.9rem}
+}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;bottom:0;background:#FAFAFA;z-index:190;padding:1.5rem;overflow-y:auto;flex-direction:column;gap:0.35rem}
+.mobile-menu.open{display:flex}
+.mobile-menu .nav-link{padding:0.8rem 1rem;font-size:0.92rem;border-radius:9px}
+.mobile-menu .nav-cta{margin-top:1rem;padding:0.88rem;text-align:center;border-radius:9px;border:none;font-family:'DM Sans',sans-serif;font-size:0.92rem;font-weight:600}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Netability Singapore",
+  "legalName": "Netability (Singapore) Pte Ltd",
+  "url": "https://www.netability.sg",
+  "logo": "https://www.netability.sg/logo.png",
+  "foundingDate": "2003",
+  "foundingLocation": "Lugano, Switzerland",
+  "description": "Swiss-born IT system integrator specialising in MAS TRM compliance, Microsoft cloud migration, cybersecurity, compliance voice recording and network monitoring in Singapore.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "883 North Bridge Road, Southbank #05-04",
+    "addressLocality": "Singapore",
+    "postalCode": "198785",
+    "addressCountry": "SG"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+65-6817-3611",
+    "contactType": "customer service",
+    "email": "info@netability.sg",
+    "areaServed": ["SG","HK","CH"],
+    "availableLanguage": "English"
+  },
+  "sameAs": [
+    "https://www.netability.sg"
+  ],
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "UEN",
+    "value": "200614711H"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "IT Services",
+    "itemListElement": [
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Microsoft Cloud & Professional Services","description":"Azure migration, tenant-to-tenant migration, SharePoint Online, Intune MDM and Zero Trust security policies"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"IT Operations & MAS TRM Compliance","description":"Material IT Outsourcing, cyber hygiene scoring, business continuity management and ServiceHub platform"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Compliance Voice Recording Solutions","description":"MAS FAA-N16 compliant mobile and Microsoft Teams call recording with long-term retention"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Network Monitoring & Observability","description":"Custom Nagios scripting, intelligent event handlers and tailored monitoring plans"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Cybersecurity — Network Microsegmentation","description":"Automated Zero Trust microsegmentation powered by Zero Networks"}}
+    ]
+  }
+}
+</script>
+</head>
+<body>
+<!-- ═══ INLINE SVG ICON SPRITE ═══ -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="icon-activity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+  </symbol>
+  <symbol id="icon-arrow-left-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="17 11 21 7 17 3"/><line x1="21" y1="7" x2="3" y2="7"/><polyline points="7 21 3 17 7 13"/><line x1="3" y1="17" x2="21" y2="17"/>
+  </symbol>
+  <symbol id="icon-arrow-up-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="7 17 17 7"/><polyline points="7 7 17 7 17 17"/>
+  </symbol>
+  <symbol id="icon-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+  </symbol>
+  <symbol id="icon-badge-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/>
+  </symbol>
+  <symbol id="icon-bar-chart-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+  </symbol>
+  <symbol id="icon-bell-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8.7 3A6 6 0 0 1 18 8a21.3 21.3 0 0 1 .6 5"/><path d="M17 17H3s3-2 3-9a4.67 4.67 0 0 1 .3-1.7"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/><path d="m2 2 20 20"/>
+  </symbol>
+  <symbol id="icon-book-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+  </symbol>
+  <symbol id="icon-building-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><line x1="10" y1="6" x2="10" y2="6.01"/><line x1="14" y1="6" x2="14" y2="6.01"/><line x1="10" y1="10" x2="10" y2="10.01"/><line x1="14" y1="10" x2="14" y2="10.01"/><line x1="10" y1="14" x2="10" y2="14.01"/><line x1="14" y1="14" x2="14" y2="14.01"/>
+  </symbol>
+  <symbol id="icon-calendar-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h5"/><path d="M17.5 17.5 16 16.3V14"/><circle cx="16" cy="16" r="6"/>
+  </symbol>
+  <symbol id="icon-clipboard-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><line x1="12" y1="11" x2="16" y2="11"/><line x1="12" y1="16" x2="16" y2="16"/><line x1="8" y1="11" x2="8.01" y2="11"/><line x1="8" y1="16" x2="8.01" y2="16"/>
+  </symbol>
+  <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+  </symbol>
+  <symbol id="icon-cloud" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+  </symbol>
+  <symbol id="icon-cloud-cog" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10.37 21H9A7 7 0 1 1 15.71 9h1.79a4.5 4.5 0 0 1 2.5 8.25"/><circle cx="19" cy="19" r="3"/><line x1="19" y1="15.5" x2="19" y2="16.5"/><line x1="19" y1="21.5" x2="19" y2="22.5"/><line x1="15.5" y1="19" x2="16.5" y2="19"/><line x1="21.5" y1="19" x2="22.5" y2="19"/>
+  </symbol>
+  <symbol id="icon-code-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/>
+  </symbol>
+  <symbol id="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>
+  </symbol>
+  <symbol id="icon-flask-conical" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/>
+  </symbol>
+  <symbol id="icon-folder-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m6 14 1.45-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.55 6a2 2 0 0 1-1.94 1.5H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H18a2 2 0 0 1 2 2v2"/>
+  </symbol>
+  <symbol id="icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+  </symbol>
+  <symbol id="icon-globe-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21.54 15H17a2 2 0 0 0-2 2v4.54"/><path d="M7 3.34V5a3 3 0 0 0 3 3v0a2 2 0 0 1 2 2v0c0 1.1.9 2 2 2v0a2 2 0 0 0 2-2v0c0-1.1.9-2 2-2h3.17"/><path d="M11 21.95V18a2 2 0 0 0-2-2v0a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05"/><circle cx="12" cy="12" r="10"/>
+  </symbol>
+  <symbol id="icon-graduation-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+  </symbol>
+  <symbol id="icon-handshake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-1"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/>
+  </symbol>
+  <symbol id="icon-key-round" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M2 18v3c0 .6.4 1 1 1h4v-3h3v-3h2l1.4-1.4a6.5 6.5 0 1 0-4-4Z"/><circle cx="16.5" cy="7.5" r=".5"/>
+  </symbol>
+  <symbol id="icon-layout-dashboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/>
+  </symbol>
+  <symbol id="icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+  </symbol>
+  <symbol id="icon-lock-keyhole" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="16" r="1"/><rect x="3" y="10" width="18" height="12" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/>
+  </symbol>
+  <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+  </symbol>
+  <symbol id="icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+  </symbol>
+  <symbol id="icon-message-square" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  </symbol>
+  <symbol id="icon-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/>
+  </symbol>
+  <symbol id="icon-monitor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+  </symbol>
+  <symbol id="icon-network" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/>
+  </symbol>
+  <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+  </symbol>
+  <symbol id="icon-refresh-cw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/>
+  </symbol>
+  <symbol id="icon-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+  </symbol>
+  <symbol id="icon-scan-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-1.9-1.9"/>
+  </symbol>
+  <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+  </symbol>
+  <symbol id="icon-server" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/>
+  </symbol>
+  <symbol id="icon-settings-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/>
+  </symbol>
+  <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+  </symbol>
+  <symbol id="icon-shield-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>
+  </symbol>
+  <symbol id="icon-shield-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m14.5 9.5-5 5"/><path d="m9.5 9.5 5 5"/>
+  </symbol>
+  <symbol id="icon-smartphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/>
+  </symbol>
+  <symbol id="icon-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/>
+  </symbol>
+  <symbol id="icon-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+  </symbol>
+  <symbol id="icon-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+  </symbol>
+</svg>
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo"  onclick="window.location.href='index.html'">
+      <img id="logo-nav" src="" alt="Netability Singapore">
+    </div>
+    <div class="nav-links">
+      <a class="nav-link"  href="index.html" id="nav-home">Home</a>
+      <a class="nav-link"  href="microsoft-cloud.html" id="nav-s1">Microsoft Cloud</a>
+      <a class="nav-link"  href="mas-trm-compliance.html" id="nav-s2">IT & MAS</a>
+      <a class="nav-link"  href="voice-recording.html" id="nav-s3">Voice Recording</a>
+      <a class="nav-link"  href="network-monitoring.html" id="nav-s4">Monitoring</a>
+      <a class="nav-link"  href="cybersecurity.html" id="nav-s5">Cybersecurity</a>
+      <a class="nav-link"  href="about.html" id="nav-about">About Us</a>
+      <a class="nav-link"  href="contact.html" id="nav-contact">Contact</a>
+    </div>
+    <button class="nav-cta"  onclick="window.location.href='contact.html'">Free Assessment</button>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a class="nav-link"  href="index.html">Home</a>
+  <a class="nav-link"  href="microsoft-cloud.html">Microsoft Cloud & Professional Services</a>
+  <a class="nav-link"  href="mas-trm-compliance.html">IT Operations & MAS TRM Compliance</a>
+  <a class="nav-link"  href="voice-recording.html">Compliance Voice Recording</a>
+  <a class="nav-link"  href="network-monitoring.html">Network Monitoring & Observability</a>
+  <a class="nav-link"  href="cybersecurity.html">Cybersecurity — Microsegmentation</a>
+  <a class="nav-link"  href="about.html">About Us</a>
+  <button class="nav-cta"  onclick="window.location.href='contact.html'">Get a Free Assessment →</button>
+</div>
+
+<section class="page-hero" style="position:relative;overflow:hidden">
+    <div style="position:absolute;top:0;right:0;bottom:0;width:50%;background:linear-gradient(135deg,rgba(53,48,190,0.18),rgba(168,216,240,0.08));pointer-events:none"></div>
+    <div class="page-hero-inner">
+      <button class="back-btn"  onclick="window.location.href='index.html'">Back to home</button>
+      <div class="page-badge" style="background:rgba(53,48,190,0.15);border:1px solid rgba(53,48,190,0.3);color:#A8B4F8">Founded 2003 · Swiss-born · Singapore-based</div>
+      <h1>Built by engineers.<br><em style="color:#A8D8F0">Driven by expertise.</em></h1>
+      <p class="tagline">Two decades of hands-on technology experience — from the founders to every engineer on the team. We don't just implement solutions. We understand them, evolve with them, and stand behind them.</p>
+    </div>
+  </section>
+
+  <div style="max-width:1200px;margin:0 auto;padding:4rem 2rem 5rem">
+
+    <!-- Intro strip -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:1.5rem;margin-bottom:4rem">
+      <div style="background:var(--brand-dim);border:1.5px solid rgba(53,48,190,0.15);border-radius:12px;padding:1.4rem;text-align:center">
+        <div style="font-family:'DM Sans',sans-serif;font-size:2rem;font-weight:700;letter-spacing:-0.02em;color:var(--brand);margin-bottom:0.3rem">2003</div>
+        <p style="font-size:0.78rem;color:var(--slate);line-height:1.5">Founded in Lugano, Switzerland by two Chief Engineers</p>
+      </div>
+      <div style="background:var(--brand-dim);border:1.5px solid rgba(53,48,190,0.15);border-radius:12px;padding:1.4rem;text-align:center">
+        <div style="font-family:'DM Sans',sans-serif;font-size:2rem;font-weight:700;letter-spacing:-0.02em;color:var(--brand);margin-bottom:0.3rem">20+</div>
+        <p style="font-size:0.78rem;color:var(--slate);line-height:1.5">Years of ICT expertise across infrastructure, security and cloud</p>
+      </div>
+      <div style="background:var(--brand-dim);border:1.5px solid rgba(53,48,190,0.15);border-radius:12px;padding:1.4rem;text-align:center">
+        <div style="font-family:'DM Sans',sans-serif;font-size:2rem;font-weight:700;letter-spacing:-0.02em;color:var(--brand);margin-bottom:0.3rem">3</div>
+        <p style="font-size:0.78rem;color:var(--slate);line-height:1.5">International offices — Singapore, Switzerland, Hong Kong</p>
+      </div>
+      <div style="background:var(--brand-dim);border:1.5px solid rgba(53,48,190,0.15);border-radius:12px;padding:1.4rem;text-align:center">
+        <div style="font-family:'DM Sans',sans-serif;font-size:2rem;font-weight:700;letter-spacing:-0.02em;color:var(--brand);margin-bottom:0.3rem">10+</div>
+        <p style="font-size:0.78rem;color:var(--slate);line-height:1.5">Average years of experience across our solutions and technical team</p>
+      </div>
+    </div>
+
+    <!-- Story + Philosophy -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-bottom:4rem;align-items:start">
+      <div>
+        <div class="section-eye">Our Story</div>
+        <h2 style="font-family:'DM Sans',sans-serif;font-size:1.8rem;font-weight:700;letter-spacing:-0.02em;letter-spacing:-0.01em;margin-bottom:1.2rem;color:var(--text)">Swiss precision.<br>Asian market depth.</h2>
+        <p style="font-size:0.92rem;color:var(--text2);line-height:1.8;margin-bottom:1rem">Netability was founded in 2003 in Lugano, Switzerland — not by a team of business developers, but by two practising engineers with deep roots in network voice, infrastructure and security. That technical DNA has never left us. It runs through every engagement we deliver, every solution we architect, and every team member we hire.</p>
+        <p style="font-size:0.92rem;color:var(--text2);line-height:1.8;margin-bottom:1rem">We established our Singapore headquarters in 2006 — our regional centre of competence for Asia-Pacific. From here, we serve financial services institutions, government and regulated agencies, multinational conglomerates, and asset management firms across the region. Our solutions have evolved as the market has: from voice and networking in our early years, to today's mix of cloud, cybersecurity and business compliance.</p>
+        <p style="font-size:0.92rem;color:var(--text2);line-height:1.8">Our roadmap extends into the Middle East — a reflection of a business that keeps growing, keeps learning, and keeps finding new ways to deliver value to customers who trust us with their most critical systems.</p>
+      </div>
+      <div>
+        <div class="section-eye">The Neta-Way</div>
+        <h2 style="font-family:'DM Sans',sans-serif;font-size:1.8rem;font-weight:700;letter-spacing:-0.02em;letter-spacing:-0.01em;margin-bottom:1.2rem;color:var(--text)">How we work.<br>How we partner.</h2>
+        <div style="display:flex;flex-direction:column;gap:1rem">
+          <div style="display:flex;gap:1rem;align-items:flex-start;padding:1.1rem;background:#FAFAFA;border:1.5px solid var(--border);border-radius:10px">
+            <div style="width:34px;height:34px;background:var(--brand-dim);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--brand)"><svg class="licon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-handshake"/></svg></div>
+            <div><h5 style="font-size:0.86rem;font-weight:600;color:var(--text);margin-bottom:0.25rem">Honesty</h5><p style="font-size:0.8rem;color:var(--slate);line-height:1.55">Clear rules, ethical practices, and integrity in every engagement. What we promise is what we deliver — no ambiguity.</p></div>
+          </div>
+          <div style="display:flex;gap:1rem;align-items:flex-start;padding:1.1rem;background:#FAFAFA;border:1.5px solid var(--border);border-radius:10px">
+            <div style="width:34px;height:34px;background:var(--brand-dim);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--brand)"><svg class="licon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-users"/></svg></div>
+            <div><h5 style="font-size:0.86rem;font-weight:600;color:var(--text);margin-bottom:0.25rem">Team Spirit</h5><p style="font-size:0.8rem;color:var(--slate);line-height:1.55">When a Netability engineer takes ownership of an issue, the whole team stands behind that engineer. Our customers experience this directly.</p></div>
+          </div>
+          <div style="display:flex;gap:1rem;align-items:flex-start;padding:1.1rem;background:#FAFAFA;border:1.5px solid var(--border);border-radius:10px">
+            <div style="width:34px;height:34px;background:var(--brand-dim);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--brand)"><svg class="licon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-search"/></svg></div>
+            <div><h5 style="font-size:0.86rem;font-weight:600;color:var(--text);margin-bottom:0.25rem">Trust</h5><p style="font-size:0.8rem;color:var(--slate);line-height:1.55">Empowering our team to make impactful decisions, and maintaining genuine transparency with customers — in what we know, and what we're working on.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Founders -->
+    <div style="margin-bottom:4rem">
+      <div class="section-eye">Our Founders</div>
+      <h2 style="font-family:'DM Sans',sans-serif;font-size:1.8rem;font-weight:700;letter-spacing:-0.02em;letter-spacing:-0.01em;margin-bottom:0.7rem;color:var(--text)">Technically trained.<br>Still hands-on.</h2>
+      <p style="font-size:0.92rem;color:var(--slate);max-width:600px;line-height:1.7;margin-bottom:2.5rem">Both founders came from the bench — not the boardroom. They built the company on the conviction that the best technology advice comes from people who still work with the technology themselves.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
+
+        <!-- Fabio -->
+        <div style="background:#FAFAFA;border:1.5px solid var(--border);border-radius:14px;overflow:hidden">
+          <div style="height:5px;background:linear-gradient(90deg,var(--brand),var(--grad-end))"></div>
+          <div style="padding:2rem">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
+              <div style="width:52px;height:52px;border-radius:50%;background:var(--brand-dim);border:2px solid rgba(53,48,190,0.2);display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-size:1.1rem;font-weight:700;color:var(--brand);flex-shrink:0;letter-spacing:-0.02em">FC</div>
+              <div>
+                <h3 style="font-family:'DM Sans',sans-serif;font-size:1.2rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);margin-bottom:0.1rem">Fabio Curcio</h3>
+                <p style="font-size:0.75rem;color:var(--brand);font-weight:600;text-transform:uppercase;letter-spacing:0.06em">Co-Founder · Cybersecurity Consultant</p>
+              </div>
+            </div>
+            <p style="font-size:0.87rem;color:var(--text2);line-height:1.75;margin-bottom:1.2rem">With 25 years of experience in infrastructure and security architecture, Fabio holds a degree in Computer Science and is a certified instructor for a leading security solution platform. His advisory practice spans deep compliance work in the financial and healthcare sectors.</p>
+            <p style="font-size:0.87rem;color:var(--text2);line-height:1.75;margin-bottom:1.4rem">What sets Fabio apart is his commitment to staying current. He doesn't manage from a distance — he actively tracks evolving regulatory standards, attends certification programmes, and brings that knowledge directly into client engagements. His customers receive guidance that is both technically precise and regulatory current.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.4rem">
+              <span style="font-size:0.7rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:100px;background:var(--brand-dim);color:var(--brand)">25+ Years Experience</span>
+              <span style="font-size:0.7rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:100px;background:var(--brand-dim);color:var(--brand)">Computer Science Degree</span>
+              <span style="font-size:0.7rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:100px;background:var(--brand-dim);color:var(--brand)">Certified Security Instructor</span>
+              <span style="font-size:0.7rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:100px;background:var(--brand-dim);color:var(--brand)">Financial &amp; Healthcare Compliance</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mario -->
+        <div style="background:#FAFAFA;border:1.5px solid var(--border);border-radius:14px;overflow:hidden">
+          <div style="height:5px;background:linear-gradient(90deg,var(--c2),var(--grad-start))"></div>
+          <div style="padding:2rem">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem">
+              <div style="width:52px;height:52px;border-radius:50%;background:var(--c2d);border:2px solid rgba(26,95,173,0.2);display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-size:1.1rem;font-weight:700;color:var(--c2);flex-shrink:0;letter-spacing:-0.02em">MD</div>
+              <div>
+                <h3 style="font-family:'DM Sans',sans-serif;font-size:1.2rem;font-weight:700;letter-spacing:-0.02em;color:var(--text);margin-bottom:0.1rem">Mario Domeniconi</h3>
+                <p style="font-size:0.75rem;color:var(--c2);font-weight:600;text-transform:uppercase;letter-spacing:0.06em">Co-Founder · IT Consultant &amp; Strategist</p>
+              </div>
+            </div>
+            <p style="font-size:0.87rem;color:var(--text2);line-height:1.75;margin-bottom:1.2rem">Mario brings over 25 years of experience in networking, security and managed services. He holds an Engineering degree in Telecommunications from EIF University of Applied Sciences Fribourg and an MBA in Economics from Bocconi University — a rare combination of deep technical credentials and strategic business thinking.</p>
+            <p style="font-size:0.87rem;color:var(--text2);line-height:1.75;margin-bottom:1.4rem">He leads Netability's Singapore operations and the SOCloud managed platform — and works hands-on across the technology stack. Mario's approach is simple: lead from the front, stay technically current, and make sure every customer receives solutions backed by real, current knowledge rather than dated assumptions.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.4rem">
+              <span style="font-size:0.7rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:100px;background:var(--c2d);color:var(--c2)">25+ Years Experience</span>
+              <span style="font-size:0.7rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:100px;background:var(--c2d);color:var(--c2)">Telecoms Engineering Degree</span>
+              <span style="font-size:0.7rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:100px;background:var(--c2d);color:var(--c2)">MBA — Bocconi University</span>
+              <span style="font-size:0.7rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:100px;background:var(--c2d);color:var(--c2)">Singapore Operations Lead</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Team & Continuous Learning -->
+    <div style="background:var(--text);border-radius:16px;padding:3rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-bottom:4rem">
+      <div>
+        <div style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:rgba(168,216,240,0.7);margin-bottom:0.7rem">Our Team</div>
+        <h2 style="font-family:'DM Sans',sans-serif;font-size:1.7rem;font-weight:700;letter-spacing:-0.02em;color:#fff;letter-spacing:-0.01em;margin-bottom:1.1rem">Certified. Current.<br>Committed to learning.</h2>
+        <p style="font-size:0.9rem;color:rgba(255,255,255,0.6);line-height:1.8;margin-bottom:1.2rem">Our solutions and technical team averages 10 years of experience across local and international IT sectors, with active vendor certifications spanning all of our core technology partners. But certifications alone don't define us — it's what happens between certifications that does.</p>
+        <p style="font-size:0.9rem;color:rgba(255,255,255,0.6);line-height:1.8">We invest deliberately in skills development as a structural part of how the team operates. Annual training plans, vendor-led workshops and lab-based hands-on exercises form a rolling cycle that keeps every team member current with the technologies our customers depend on — so that advice from any Netability engineer reflects how the technology actually works today, not two years ago.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1rem">
+        <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:1.1rem;display:flex;gap:0.9rem;align-items:flex-start">
+          <div style="width:34px;height:34px;background:rgba(168,216,240,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:rgba(168,216,240,0.9)"><svg class="licon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-book-open"/></svg></div>
+          <div><h5 style="font-size:0.84rem;font-weight:600;color:#fff;margin-bottom:0.2rem">Annual Training Plans</h5><p style="font-size:0.78rem;color:rgba(255,255,255,0.5);line-height:1.5">Structured learning roadmaps for every team member — aligned to the technologies our customers run</p></div>
+        </div>
+        <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:1.1rem;display:flex;gap:0.9rem;align-items:flex-start">
+          <div style="width:34px;height:34px;background:rgba(168,216,240,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:rgba(168,216,240,0.9)"><svg class="licon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-building-2"/></svg></div>
+          <div><h5 style="font-size:0.84rem;font-weight:600;color:#fff;margin-bottom:0.2rem">Vendor-Led Workshops</h5><p style="font-size:0.78rem;color:rgba(255,255,255,0.5);line-height:1.5">Direct access to deep-dive sessions with our core technology partners — keeping the team at the cutting edge</p></div>
+        </div>
+        <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:1.1rem;display:flex;gap:0.9rem;align-items:flex-start">
+          <div style="width:34px;height:34px;background:rgba(168,216,240,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:rgba(168,216,240,0.9)"><svg class="licon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-flask-conical"/></svg></div>
+          <div><h5 style="font-size:0.84rem;font-weight:600;color:#fff;margin-bottom:0.2rem">Hands-On Lab Practice</h5><p style="font-size:0.78rem;color:rgba(255,255,255,0.5);line-height:1.5">Lab-based exercises that turn certification knowledge into real-world competence before it reaches a customer</p></div>
+        </div>
+        <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:1.1rem;display:flex;gap:0.9rem;align-items:flex-start">
+          <div style="width:34px;height:34px;background:rgba(168,216,240,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:rgba(168,216,240,0.9)"><svg class="licon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-award"/></svg></div>
+          <div><h5 style="font-size:0.84rem;font-weight:600;color:#fff;margin-bottom:0.2rem">Active Vendor Certifications</h5><p style="font-size:0.78rem;color:rgba(255,255,255,0.5);line-height:1.5">Every engineer holds current certifications across Netability's core technology partner stack — not legacy credentials</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vision / Mission -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:3rem">
+      <div style="background:var(--bg2);border:1.5px solid var(--border);border-radius:12px;padding:1.8rem">
+        <div style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--brand);margin-bottom:0.7rem">Our Vision</div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:1.05rem;color:var(--text);line-height:1.65;font-weight:500;font-style:italic">"To achieve global recognition for delivering distinctive business propositions through innovative solutions and exceptional professional services."</p>
+        <p style="font-size:0.82rem;color:var(--slate);margin-top:0.8rem;line-height:1.6">We aspire to be the partner our customers think of first when they need their IT estate to be more secure, more agile, or more aligned with their business strategy.</p>
+      </div>
+      <div style="background:var(--bg2);border:1.5px solid var(--border);border-radius:12px;padding:1.8rem">
+        <div style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--brand);margin-bottom:0.7rem">Our Mission</div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:1.05rem;color:var(--text);line-height:1.65;font-weight:500;font-style:italic">"Continuous technology investment to stay at the forefront of innovation — delivering creative, cutting-edge solutions while nurturing a lasting passion to evolve alongside our customers."</p>
+        <p style="font-size:0.82rem;color:var(--slate);margin-top:0.8rem;line-height:1.6">Long-term relationships, aligned priorities, and the drive to grow together with every customer we serve.</p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="background:linear-gradient(135deg,var(--brand),var(--c2));border-radius:14px;padding:2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:2rem">
+      <div>
+        <h3 style="font-family:'DM Sans',sans-serif;font-size:1.5rem;font-weight:700;letter-spacing:-0.02em;color:#fff;margin-bottom:0.5rem">Ready to work with a team that really knows the technology?</h3>
+        <p style="font-size:0.88rem;color:rgba(255,255,255,0.7);max-width:500px;line-height:1.6">Book a free consultation. No obligation — just an honest conversation about your IT environment and how we can help.</p>
+      </div>
+      <button  onclick="window.location.href='contact.html'" style="background:#FAFAFA;color:var(--brand);font-weight:700;font-size:0.9rem;padding:0.9rem 2rem;border-radius:9px;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap;flex-shrink:0">Book a Free Consultation →</button>
+    </div>
+  </div>
+
+<footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div><div class="footer-logo"><img id="logo-footer" src="" alt="Netability"></div><p class="footer-desc">Swiss-born IT services company with offices in Singapore and Hong Kong. Specialists in MAS TRM compliance, Microsoft cloud, cybersecurity and managed IT since 2003.</p></div>
+        <div class="footer-col"><h5>Solutions</h5><a  href="microsoft-cloud.html">Microsoft Cloud</a><a  href="mas-trm-compliance.html">IT &amp; MAS Compliance</a><a  href="voice-recording.html">Voice Recording</a><a  href="network-monitoring.html">Network Monitoring</a><a  href="cybersecurity.html">Cybersecurity</a></div>
+        <div class="footer-col"><h5>Company</h5><a  href="about.html">About Us</a><a style="cursor:default;pointer-events:none">UEN: 200614711H</a><a  href="contact.html">Contact Us</a><a href="mailto:info@netability.sg">info@netability.sg</a></div>
+        <div class="footer-col"><h5>Singapore Office</h5><a>+65 6817 3611</a><a>883 North Bridge Road<br>Southbank #05-04<br>Singapore 198785</a></div>
+      </div>
+      <hr class="footer-divider">
+      <div class="footer-bottom"><p>© 2025 Netability (Singapore) Pte Ltd · UEN 200614711H</p><p>Swiss-founded · Singapore-based · MAS TRM Specialists</p></div>
+    </div>
+  </footer>
+
+<script>
+const LOGO='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVkAAABkCAYAAAAsYUMcAAAAAXNSR0IArs4c6QAAE4BJREFUeF7tnQXQ3UQXhre4FHd318EZtGgp7hR3d3cplCle3N1dilOcYsWluGsLxd36z5P509nszU1yk+zX3Nz3zHQ68yXZu3l373M3Z8856TZixIgRRiYFpIAUkAJeFOgmyHrRVY1KASkgBQIFBFlNBCkgBaSARwUEWY/iqmkpIAWkgCCrOSAFpIAU8KiAIOtRXDUtBaSAFBBkNQekgBSQAh4VEGQ9iqumpYAUkAKCrOaAFJACUsCjAoKsR3HVtBSQAlJAkNUckAJSQAp4VECQ9SiumpYCUkAKCLKaA1JACkgBjwoIsh7FVdNSQApIAUFWc0AKSAEp4FEBQdajuGpaCkgBKSDIag5IASkgBTwqIMh6FFdNSwEpIAUEWc0BKSAFpIBHBQRZj+KqaSkgBaSAIKs5IAWkgBTwqIAg61FcNS0FpIAUEGQ1B6SAFJACHhUQZD2Kq6algBSQAoKs5oAUkAJSwKMCgqxHcdW0FJACUkCQ1RyQAlJACnhUQJBNEfebb74xvXr1Mi+88EJpwzDmmGOaXXfd1Zx11lmltamGpIAUqKYCgmzKuFx44YUBEH3YsGHDzBRTTOGjabUpBaRARRSoDWQfe+yxYGW42mqrlQrFM844w+y///5ehuvjjz82M800k5e21WhxBTbbbDMzePDgSENXXnmlWXbZZYs3nqOFjz76yKy44oqRK6effnozaNCgHK3pkq5SoDaQnXzyyc3w4cMD3Y455hhz7LHHlqKhIFuKjG3ZyPLLL2+efPLJSN8ffPBBs+qqq5Z6P99++6154IEHzJ9//hksEgBnnL377rtmrrnmihyaccYZzSeffNK0Py+99JJ57rnngjbXWGMNM8YYY5TadzWWrkBtINutW7fI3R5yyCGmX79+6QqknCHIFpawbRvoCsi++OKLgc8f1xE2wQQTmJtuusn07NmzQbdWIXvkkUeaE0880YwYMSJoa4klljAPP/yw6d69e9uOSTt2vLaQZTDKAK0g247Tupw+dwVkF1tsMQNobZt66qnN559/bkYfffTI31uBLBu1QDUEbNjQ4Ycfbvr27VuOQGolkwK1hmwZoBVkM82jWp7kG7J//PGHGX/88c1///0Xu2qdY445ckP27LPPNnvvvXdDuz169DCPPPJILcerqjdVe8gWBa0g63/q/vzzz2bIkCHm9ddfN2+88Ubw76CDDjKrr766/w9P+ATfkOWjp5lmGvP1119HekGI3w8//GDGG2+83JC96667zLrrrttwd9ttt5257LLLmt41fQnH4M033zSvvfZaAGV+DGT5FOgIyBYBrSCbb2K1ctU666xjBgwYELnk5ptvNhtttFErzZR+bldANi5EkE1bNm9da8Vd8M8//wRREGx6hYYvFtfEnHPO2VSrscYay/z999+R4z/99FPgK5blU6BjIJsXtIJsvonVylWdDFl0uvvuu80111xjAOOGG25oevfuHStfK5ClgV9//dWcdtpp5tlnnzUzzzyzOeCAA8xss82WODSCbCszN9u5HQXZPKAVZLNNpCJndTpks2rXKmSztmufJ8jmUS35mo6DbKugFWTLn3Rui4JsNo0F2Ww6Ve2sjoRsK6CtC2TZwR5ttNG8zL+ibbc7ZIvef9ZBEWSzKlWt8zoWsllBW2XIHnrooeb777+PzKiTTjrJTDzxxIbwoBtvvNHcfvvtQXGboUOHBudNO+20ZpVVVjG77babIUazVSPukqwn2iWV+bPPPjO//fZbsDFCyNHKK69sttlmGzPffPM1bfqtt94y/fv3H3mcbCc3a2m99dZryG7igsMOO8xMNNFEDW1TyOeOO+4I+vTyyy+bL7/80vz444/BeZNOOmnQtyWXXNKQKrv00ktnuu1mG1+0RXrtwIEDg4gIPmecccYJtCVEaoMNNgiyq9wEmbgPfeihh8wtt9wSOUQb9NO1ViF79NFHjxz3sC3+Nt10041sms+mD6FdcsklDSFl++23n8GNYNtUU01l+DtG3O2nn34aOb7UUksZIhmyGD7jyy+/PHIqmW2+0tmz9KnMczoasllAW2XIzjDDDEHQum1ffPFFkAp68MEHN0x8+zwAsOeeexruzw16bzbBaJeJn1aRjBXzpptuas4991wzySSTNDTHl5r00TwG1N200x133NFcffXV5q+//srUJBADJrPOOmvi+XGQXWGFFczTTz/dsAPvNkQiwPnnn28WWWSRxM9gY+rAAw+MnMO4EOdaFLKACjDb9uqrr5oFF1xw5J/4bPrQqs0///zBDwxGzZB99tkn0sSEE04Y/ADzf5oxF2zQc/4VV1wR/FjXwToesmmgbTfIbrzx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';
+function toggleMenu(){
+  document.getElementById('mobile-menu').classList.toggle('open');
+}
+window.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('#logo-nav,#logo-footer,#logo-footer2,#logo-footer-about').forEach(function(img){img.src=LOGO});
+});
+</script>
+</body>
+</html>

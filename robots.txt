@@ -1,0 +1,14 @@
+# robots.txt — Netability Singapore
+# https://www.netability.sg
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.netability.sg/sitemap.xml
+
+# Block common junk paths
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /*.php$
+Disallow: /cgi-bin/
