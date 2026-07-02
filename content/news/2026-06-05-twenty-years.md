@@ -1,7 +1,7 @@
 ---
 title: "Netability marks over 20 years of IT engineering across Singapore, Switzerland and Hong Kong"
 author: "Netability Singapore"
-author_title: "IT Security, Cloud & MAS Compliance"
+author_title: "IT Cyber Security, Cloud & MAS Compliance"
 date: 2026-06-05T09:00:00.000Z
 category: "Company news"
 tags:

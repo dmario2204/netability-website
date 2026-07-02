@@ -1,7 +1,7 @@
 ---
 title: "Why network microsegmentation stops ransomware where firewalls can't"
 author: "Netability Singapore"
-author_title: "IT Security, Cloud & MAS Compliance"
+author_title: "IT Cyber Security, Cloud & MAS Compliance"
 date: 2026-06-18T09:00:00.000Z
 category: "Security insight"
 tags:
