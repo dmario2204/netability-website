@@ -727,3 +727,96 @@ footer{background:var(--text);color:#fff;padding:3rem 2rem 2rem}
   .news-feed{padding:2rem 1rem 3rem}
   .post-image{max-height:280px}
 }
+
+
+/* ══════════════════════════════════════════
+   MOBILE FIXES — comprehensive (<=768px)
+══════════════════════════════════════════ */
+@media(max-width:768px){
+  /* Prevent any horizontal overflow site-wide */
+  html,body{overflow-x:hidden;max-width:100%}
+  *{max-width:100%}
+
+  /* NAV — logo left, hamburger right, hide button + links */
+  .nav-inner{padding:0 1rem;height:60px}
+  .nav-logo img{height:30px}
+  .nav-links{display:none !important}
+  .nav-cta{display:none !important}         /* hide top-bar button; it's in the menu */
+  .hamburger{display:flex !important;margin-left:auto;z-index:210}
+  .hamburger span{background:var(--text)}   /* dark bars on light nav */
+
+  /* Mobile menu drop-down position matches nav height */
+  .mobile-menu{top:60px;padding:1.2rem}
+  .mobile-menu .nav-cta{display:block !important;margin-top:0.5rem;text-align:center}
+
+  /* HERO — reduce padding, stack, size down text */
+  .hero{padding:5rem 1.2rem 3rem}
+  .hero-inner{grid-template-columns:1fr;padding:0}
+  .hero h1{font-size:2rem;line-height:1.15;margin-bottom:1rem}
+  .hero-eyebrow{font-size:0.62rem;white-space:normal;line-height:1.4;padding:0.4rem 0.8rem}
+  .hero-text p{font-size:0.95rem;line-height:1.6}
+  .lead-card{display:none}
+
+  /* Hero buttons — stack full width */
+  .hero-btns{flex-direction:column;gap:0.7rem;width:100%}
+  .hero-btns .btn-primary,.hero-btns .btn-ghost{width:100%;text-align:center;justify-content:center}
+
+  /* Hero stats — 2x2 grid, contained */
+  .hero-stats{flex-wrap:wrap;gap:1.5rem 2rem;margin-top:2rem;padding-top:2rem}
+  .h-stat{flex:0 0 40%}
+  .h-stat strong{font-size:1.6rem}
+
+  /* Practice cards — single column, full width */
+  .cubic-grid{grid-template-columns:1fr;border-radius:14px}
+  .cubic-card{border-right:none;border-bottom:1.5px solid var(--border);min-height:auto}
+  .cubic-card:last-child{border-bottom:none}
+
+  /* Section headers */
+  .practices{padding:3rem 1.2rem}
+  .practices-header{grid-template-columns:1fr;gap:1rem;margin-bottom:2rem}
+  .section-title{font-size:1.8rem}
+
+  /* Trust bar — 2x2 */
+  .trust-bar{padding:2.5rem 1.2rem}
+  .trust-inner{grid-template-columns:1fr 1fr;gap:1.5rem;padding:0}
+
+  /* Partners — tighter */
+  .partners{padding:3rem 0}
+  .partners-header{padding:0 1.2rem}
+  .partners-header h2{font-size:1.5rem}
+  .marquee{padding:0 1rem}
+  .partner-logo{width:140px;height:64px;padding:0.8rem 1rem}
+
+  /* Page hero (inner pages + news) */
+  .page-hero{padding:5.5rem 1.2rem 2.5rem}
+  .page-hero h1{font-size:1.9rem}
+  .page-hero .tagline{font-size:0.95rem}
+  .page-hero-inner{padding:0}
+
+  /* Inner page content */
+  .inner-page{padding:2rem 1.2rem 3rem}
+  .detail-grid{grid-template-columns:1fr;gap:2rem}
+  .sidebar{position:static}
+
+  /* News feed */
+  .news-feed{padding:2rem 1rem 3rem}
+  .post-card{border-radius:14px}
+  .post-image{max-height:240px}
+
+  /* Contact */
+  .contact-wrap{grid-template-columns:1fr;padding:2rem 1.2rem;gap:2rem}
+
+  /* Footer — 2 columns then stack */
+  .footer-inner{padding:0 1.2rem}
+  .footer-top{grid-template-columns:1fr 1fr;gap:1.5rem}
+  .footer-bottom{flex-direction:column;gap:0.6rem;text-align:center}
+}
+
+/* Extra-small phones */
+@media(max-width:420px){
+  .hero h1{font-size:1.7rem}
+  .trust-inner{grid-template-columns:1fr 1fr}
+  .footer-top{grid-template-columns:1fr}
+  .h-stat{flex:0 0 100%}
+  .section-title{font-size:1.5rem}
+}

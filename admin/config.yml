@@ -1,0 +1,31 @@
+backend:
+  name: github
+  repo: dmario2204/netability-website
+  branch: main
+
+# Where uploaded images go
+media_folder: "images/news"
+public_folder: "images/news"
+
+# Editorial workflow lets posts be drafted before publishing
+publish_mode: editorial_workflow
+
+collections:
+  - name: "news"
+    label: "News Posts"
+    folder: "content/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    identifier_field: title
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Author", name: "author", widget: "string", default: "Netability Singapore" }
+      - { label: "Author title", name: "author_title", widget: "string", default: "IT Security, Cloud & MAS Compliance", required: false }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Category label", name: "category", widget: "string", default: "Company news", required: false }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Cover image", name: "image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Call-to-action text", name: "cta_text", widget: "string", required: false }
+      - { label: "Call-to-action link", name: "cta_link", widget: "string", required: false, hint: "e.g. voice-recording.html" }
