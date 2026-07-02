@@ -7,21 +7,23 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 
-# Long cache for static assets (they rarely change)
+# CSS & JS — revalidate every load so updates show immediately
+# (Cloudflare still serves fast from edge; this just checks for a newer version)
 /css/*
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=0, must-revalidate
 
 /js/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Images rarely change — cache them longer
+/images/*
   Cache-Control: public, max-age=604800
 
-/images/*
-  Cache-Control: public, max-age=2592000
-
 /logos/*
-  Cache-Control: public, max-age=2592000
+  Cache-Control: public, max-age=604800
 
 /icons/*
-  Cache-Control: public, max-age=2592000
+  Cache-Control: public, max-age=86400
 
 # HTML always revalidated
 /*.html
