@@ -611,3 +611,119 @@ footer{background:var(--text);color:#fff;padding:3rem 2rem 2rem}
 .partner-logo:hover{border-color:var(--border2);background:#fff}
 .partner-logo:hover img{opacity:1}
 @media(max-width:680px){.partner-logo{width:130px;height:65px;padding:0.8rem 1.1rem}.marquee-track{gap:2rem;padding-right:2rem}.partners-header h2{font-size:1.6rem}}
+
+
+/* ══════════════════════════════════════════
+   NEWS / POSTS FEED — LinkedIn-style
+══════════════════════════════════════════ */
+.news-feed{
+  max-width:720px;
+  margin:0 auto;
+  padding:3rem 2rem 5rem;
+}
+.news-feed-intro{
+  text-align:center;
+  margin-bottom:2.5rem;
+}
+.news-feed-intro h2{
+  font-family:'DM Serif Display',serif;
+  font-size:1.6rem;font-weight:400;
+  color:var(--text);margin-bottom:0.4rem;
+}
+.news-feed-intro p{
+  font-size:0.92rem;color:var(--slate);
+}
+/* Individual post card */
+.post-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:16px;
+  margin-bottom:1.5rem;
+  overflow:hidden;
+  transition:box-shadow 0.25s, transform 0.25s;
+}
+.post-card:hover{
+  box-shadow:0 8px 30px rgba(53,48,190,0.08);
+  transform:translateY(-2px);
+}
+/* Post header — author row */
+.post-head{
+  display:flex;align-items:center;gap:0.8rem;
+  padding:1.2rem 1.4rem 0.9rem;
+}
+.post-avatar{
+  width:48px;height:48px;border-radius:50%;
+  background:linear-gradient(135deg,var(--brand),var(--grad-end));
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-weight:700;font-size:1.05rem;
+  flex-shrink:0;
+}
+.post-author{flex:1;min-width:0}
+.post-author-name{
+  font-size:0.9rem;font-weight:700;color:var(--text);
+  display:flex;align-items:center;gap:0.35rem;
+}
+.post-author-title{
+  font-size:0.76rem;color:var(--slate);
+}
+.post-meta{
+  font-size:0.72rem;color:var(--slate);
+  margin-top:0.1rem;
+}
+/* Post body text */
+.post-body{
+  padding:0 1.4rem 1rem;
+}
+.post-body h3{
+  font-family:'DM Sans',sans-serif;
+  font-size:1.15rem;font-weight:700;
+  color:var(--text);line-height:1.3;
+  margin-bottom:0.6rem;
+}
+.post-body p{
+  font-size:0.92rem;color:var(--text2);
+  line-height:1.65;margin-bottom:0.8rem;
+}
+.post-body p:last-child{margin-bottom:0}
+.post-body a{color:var(--brand);font-weight:600;text-decoration:none}
+.post-body a:hover{text-decoration:underline}
+.post-body ul{margin:0.5rem 0 0.9rem 1.2rem}
+.post-body li{font-size:0.92rem;color:var(--text2);line-height:1.6;margin-bottom:0.3rem}
+/* Post image */
+.post-image{
+  width:100%;
+  max-height:420px;
+  object-fit:cover;
+  display:block;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+/* Tags */
+.post-tags{
+  display:flex;flex-wrap:wrap;gap:0.4rem;
+  padding:0.4rem 1.4rem 1.2rem;
+}
+.post-tag{
+  font-size:0.7rem;font-weight:600;
+  color:var(--brand);
+  background:var(--brand-dim);
+  padding:0.25rem 0.7rem;border-radius:100px;
+}
+/* Footer bar of post (link / read more) */
+.post-footer{
+  display:flex;align-items:center;gap:0.5rem;
+  padding:0.9rem 1.4rem;
+  border-top:1px solid var(--border);
+  font-size:0.8rem;color:var(--slate);
+}
+.post-footer .post-cta{
+  margin-left:auto;
+  color:var(--brand);font-weight:600;
+  text-decoration:none;font-size:0.82rem;
+  display:inline-flex;align-items:center;gap:0.3rem;
+}
+.post-footer .post-cta:hover{text-decoration:underline}
+@media(max-width:680px){
+  .news-feed{padding:2rem 1rem 3rem}
+  .post-image{max-height:280px}
+}
