@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact Netability Singapore — Free IT Consultation</title>
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 <meta name="description" content="Get in touch with Netability Singapore for a free IT, cybersecurity or MAS TRM compliance assessment. Office at 883 North Bridge Road, Southbank, Singapore 198785.">
 <meta property="og:site_name" content="Netability Singapore">
 <meta property="og:type" content="website">
@@ -209,29 +214,40 @@
     </div>
     <div class="contact-form" style="background:#fff">
       <h3>Request a Free Assessment</h3>
-      <div class="form-row">
-        <div class="form-group"><label>First Name</label><input type="text" placeholder="John"></div>
-        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Tan"></div>
+      <form action="https://api.web3forms.com/submit" method="POST" id="lead-form-contact">
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+        <input type="hidden" name="subject" value="New assessment request — Netability contact page">
+        <input type="hidden" name="from_name" value="Netability Website">
+        <input type="checkbox" name="botcheck" style="display:none">
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" name="First Name" placeholder="John" required></div>
+          <div class="form-group"><label>Last Name</label><input type="text" name="Last Name" placeholder="Tan" required></div>
+        </div>
+        <div class="form-group"><label>Work Email</label><input type="email" name="Work Email" placeholder="john@company.com.sg" required></div>
+        <div class="form-group"><label>Company Name</label><input type="text" name="Company" placeholder="Your Company"></div>
+        <div class="form-group"><label>Job Title</label><input type="text" name="Job Title" placeholder="IT Manager / CTO / Compliance Officer"></div>
+        <div class="form-group"><label>I need help with</label>
+          <select name="Solution Area">
+            <option>Select a solution area…</option>
+            <option>Microsoft Azure / M365 Cloud Migration</option>
+            <option>MAS TRM Compliance &amp; IT Outsourcing (MITO)</option>
+            <option>Cyber Hygiene Assessment &amp; Scoring</option>
+            <option>Business Continuity Management (BCM)</option>
+            <option>Compliance Voice Recording (MAS FAA-N16)</option>
+            <option>Network Monitoring &amp; Observability (Nagios)</option>
+            <option>Cybersecurity &amp; Network Microsegmentation</option>
+            <option>Multiple / Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Tell us about your environment (optional)</label><textarea name="Message" rows="3" placeholder="e.g. 50-user FA firm, on-premises, need MAS compliance…" style="width:100%;font-family:inherit;font-size:0.95rem;padding:0.7rem;border:1.5px solid var(--border);border-radius:8px;resize:vertical"></textarea></div>
+        <button type="submit" class="submit-btn">Send Request →</button>
+        <p class="form-note">🔒 All information kept strictly confidential.</p>
+      </form>
+      <div id="lead-form-contact-success" style="display:none;text-align:center;padding:2rem 0">
+        <div style="font-size:2.5rem;margin-bottom:0.5rem">✓</div>
+        <h3 style="color:var(--c2)">Request received</h3>
+        <p style="color:var(--slate)">Our team will contact you within 1 business day.</p>
       </div>
-      <div class="form-group"><label>Work Email</label><input type="email" placeholder="john@company.com.sg"></div>
-      <div class="form-group"><label>Company Name</label><input type="text" placeholder="Your Company"></div>
-      <div class="form-group"><label>Job Title</label><input type="text" placeholder="IT Manager / CTO / Compliance Officer"></div>
-      <div class="form-group"><label>I need help with</label>
-        <select>
-          <option>Select a solution area…</option>
-          <option>Microsoft Azure / M365 Cloud Migration</option>
-          <option>MAS TRM Compliance &amp; IT Outsourcing (MITO)</option>
-          <option>Cyber Hygiene Assessment &amp; Scoring</option>
-          <option>Business Continuity Management (BCM)</option>
-          <option>Compliance Voice Recording (MAS FAA-N16)</option>
-          <option>Network Monitoring &amp; Observability (Nagios)</option>
-          <option>Cybersecurity &amp; Network Microsegmentation</option>
-          <option>Multiple / Not sure yet</option>
-        </select>
-      </div>
-      <div class="form-group"><label>Tell us about your environment (optional)</label><input type="text" placeholder="e.g. 50-user FA firm, on-premises, need MAS compliance…"></div>
-      <button class="submit-btn" onclick="this.textContent='✓ Submitted — our team will contact you within 1 business day';this.style.background='var(--c2)'">Send Request →</button>
-      <p class="form-note">🔒 All information kept strictly confidential.</p>
     </div>
   </div>
 

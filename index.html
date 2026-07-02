@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Netability Singapore — IT Cyber Security, Cloud & MAS Compliance Solutions</title>
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 <meta name="description" content="Netability Singapore delivers Microsoft Azure migration, MAS TRM compliance, compliance voice recording, Nagios network monitoring and Zero Trust cybersecurity for financial institutions and enterprises in Singapore.">
 <meta property="og:site_name" content="Netability Singapore">
 <meta property="og:type" content="website">
@@ -251,24 +256,35 @@
         <div class="lead-card-top"></div>
         <h3>Start With a Free Consultation</h3>
         <p class="sub">Tell us about your environment — we'll respond within 1 business day.</p>
-        <div class="form-row">
-          <div class="form-group"><label>First Name</label><input type="text" placeholder="John"></div>
-          <div class="form-group"><label>Last Name</label><input type="text" placeholder="Tan"></div>
+        <form action="https://api.web3forms.com/submit" method="POST" id="lead-form-home">
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+          <input type="hidden" name="subject" value="New consultation request — Netability website">
+          <input type="hidden" name="from_name" value="Netability Website">
+          <input type="checkbox" name="botcheck" style="display:none">
+          <div class="form-row">
+            <div class="form-group"><label>First Name</label><input type="text" name="First Name" placeholder="John" required></div>
+            <div class="form-group"><label>Last Name</label><input type="text" name="Last Name" placeholder="Tan" required></div>
+          </div>
+          <div class="form-group"><label>Work Email</label><input type="email" name="Work Email" placeholder="john@company.com.sg" required></div>
+          <div class="form-group"><label>Company</label><input type="text" name="Company" placeholder="Your Company"></div>
+          <div class="form-group"><label>I need help with</label>
+            <select name="Service Area">
+              <option>Select a service area…</option>
+              <option>Microsoft Azure / M365 Migration</option>
+              <option>MAS TRM Compliance &amp; IT Outsourcing</option>
+              <option>Compliance Voice Recording (MAS FAA-N16)</option>
+              <option>Network Monitoring (Nagios)</option>
+              <option>Cybersecurity &amp; Microsegmentation</option>
+            </select>
+          </div>
+          <button type="submit" class="submit-btn">Request Free Assessment →</button>
+          <p class="form-note">🔒 No spam. Your details go straight to our team.</p>
+        </form>
+        <div id="lead-form-home-success" style="display:none;text-align:center;padding:1rem 0">
+          <div style="font-size:2rem;margin-bottom:0.5rem">✓</div>
+          <h3 style="color:#1A5FAD">Thank you!</h3>
+          <p class="sub">We've received your request and will be in touch within 1 business day.</p>
         </div>
-        <div class="form-group"><label>Work Email</label><input type="email" placeholder="john@company.com.sg"></div>
-        <div class="form-group"><label>Company</label><input type="text" placeholder="Your Company"></div>
-        <div class="form-group"><label>I need help with</label>
-          <select>
-            <option>Select a service area…</option>
-            <option>Microsoft Azure / M365 Migration</option>
-            <option>MAS TRM Compliance &amp; IT Outsourcing</option>
-            <option>Compliance Voice Recording (MAS FAA-N16)</option>
-            <option>Network Monitoring (Nagios)</option>
-            <option>Cybersecurity &amp; Microsegmentation</option>
-          </select>
-        </div>
-        <button class="submit-btn" onclick="this.textContent='✓ Submitted — we will be in touch!';this.style.background='#1A5FAD'">Request Free Assessment →</button>
-        <p class="form-note">🔒 No spam. All information kept confidential.</p>
       </div>
     </div>
   </section>
