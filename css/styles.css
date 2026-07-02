@@ -79,7 +79,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,
 /* subtle noise texture overlay */
 .hero-noise{position:absolute;inset:0;opacity:0.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");pointer-events:none}
 
-.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 400px;gap:4rem;align-items:center;position:relative;z-index:1}
+.hero-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:1fr 400px;gap:4rem;align-items:center;position:relative;z-index:1}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:100px;padding:0.3rem 0.9rem;font-size:0.73rem;font-weight:600;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.4rem;backdrop-filter:blur(4px)}
 .hero-eyebrow-dot{width:6px;height:6px;border-radius:50%;background:#C5B8F2;animation:blink 2s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.2}}
@@ -451,14 +451,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,
 
 /* ── TRUST BAR ── */
 .trust-bar{background:var(--bg3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:3rem 2rem}
-.trust-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center}
+.trust-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center}
 .trust-item strong{display:block;font-family:'DM Serif Display',serif;font-size:2rem;font-weight:400;color:var(--brand);margin-bottom:0.25rem}
 .trust-item p{font-size:0.8rem;color:var(--slate);line-height:1.5}
 
 /* ── INNER PAGE ── */
 .page-hero{padding:3.5rem 2rem 3rem;background:var(--text);position:relative;overflow:hidden}
 .page-hero-grad{position:absolute;top:0;right:0;bottom:0;width:40%;pointer-events:none;opacity:0.12}
-.page-hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1}
+.page-hero-inner{max-width:1200px;margin:0 auto;padding:0 2rem;position:relative;z-index:1}
 .back-btn{display:inline-flex;align-items:center;gap:6px;font-size:0.76rem;color:rgba(255,255,255,0.45);cursor:pointer;margin-bottom:1.4rem;transition:color 0.2s;background:none;border:none;font-family:'DM Sans',sans-serif}
 .back-btn:hover{color:rgba(255,255,255,0.85)}
 .back-btn::before{content:'←'}
@@ -524,7 +524,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,
 
 /* ── FOOTER ── */
 footer{background:var(--text);color:#fff;padding:3rem 2rem 2rem}
-.footer-inner{max-width:1200px;margin:0 auto}
+.footer-inner{max-width:1200px;margin:0 auto;padding:0 2rem}
 .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
 .footer-logo img{height:30px;width:auto;margin-bottom:1rem}
 .footer-desc{font-size:0.8rem;color:rgba(255,255,255,0.42);line-height:1.7;max-width:260px}
@@ -569,7 +569,7 @@ footer{background:var(--text);color:#fff;padding:3rem 2rem 2rem}
 .partners-header{max-width:1200px;margin:0 auto 3rem;padding:0 2rem;text-align:center}
 .partners-header h2{font-family:'DM Serif Display',serif;font-size:2rem;font-weight:400;letter-spacing:-0.01em;color:var(--text);margin-bottom:0.6rem}
 .partners-header p{font-size:0.93rem;color:var(--slate);max-width:520px;margin:0 auto}
-.marquee{display:flex;overflow:hidden;user-select:none;-webkit-mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent)}
+.marquee{display:flex;overflow:hidden;user-select:none;max-width:1200px;margin:0 auto;padding:0 2rem;-webkit-mask-image:linear-gradient(to right,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(to right,transparent,#000 4%,#000 96%,transparent)}
 .marquee+.marquee{margin-top:1.5rem}
 .marquee-track{display:flex;gap:3rem;flex-shrink:0;align-items:center;padding-right:3rem;animation:scroll-left 50s linear infinite}
 .marquee-track.reverse{animation:scroll-right 50s linear infinite}
