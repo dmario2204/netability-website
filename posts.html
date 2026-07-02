@@ -197,97 +197,15 @@
         <span>Sharing what we're learning in IT security, cloud &amp; compliance…</span>
       </div>
 
+      <!-- Posts load automatically from the content/news/ folder (written via /admin) -->
+      <div id="posts-container">
+        <div class="posts-loading">
+          <div class="posts-spinner"></div>
+          <p>Loading posts…</p>
+        </div>
+      </div>
+    </div>
 
-      <!-- ═══ POST TEMPLATE — copy this block to add a new post ═══ -->
-      <article class="post-card">
-        <div class="post-head">
-          <div class="post-avatar">NS</div>
-          <div class="post-author">
-            <div class="post-author-name">Netability Singapore</div>
-            <div class="post-author-title">IT Security, Cloud & MAS Compliance</div>
-            <div class="post-meta">2 July 2026 · 3 min read</div>
-          </div>
-        </div>
-        <div class="post-body">
-          <h3>MAS FAA-N16 voice recording amendments: what financial advisers must do before the deadline</h3>
-          <p>The Monetary Authority of Singapore amended Notice FAA-N16 on 29 December 2025, tightening requirements for the recording and retention of client communications. Licensed and exempt financial advisers now face clearer obligations around mobile call capture and audit trails.</p>
-          <p>Our compliance team has broken down the practical steps — from Tier 1 mobile recording to Microsoft Teams capture — to help your firm stay ahead of the requirements.</p>
-        </div>
-        <div class="post-tags">
-          <span class="post-tag">MAS Compliance</span>
-          <span class="post-tag">FAA-N16</span>
-          <span class="post-tag">Voice Recording</span>
-        </div>
-        <div class="post-actions">
-          <button class="post-action"><svg viewBox="0 0 24 24"><use href="#icon-award"/></svg>Like</button>
-          <button class="post-action"><svg viewBox="0 0 24 24"><use href="#icon-mail"/></svg>Comment</button>
-          <button class="post-action"><svg viewBox="0 0 24 24"><use href="#icon-arrow-up-right"/></svg>Share</button>
-          <a class="post-action cta" href="voice-recording.html"><svg viewBox="0 0 24 24"><use href="#icon-arrow-up-right"/></svg>Learn about our voice recording solution</a>
-        </div>
-      </article>
-
-      <!-- POST 2 -->
-      <article class="post-card">
-        <div class="post-head">
-          <div class="post-avatar">NS</div>
-          <div class="post-author">
-            <div class="post-author-name">Netability Singapore</div>
-            <div class="post-author-title">IT Security, Cloud & MAS Compliance</div>
-            <div class="post-meta">18 June 2026 · 4 min read</div>
-          </div>
-        </div>
-        <div class="post-body">
-          <h3>Why network microsegmentation stops ransomware where firewalls can't</h3>
-          <p>Traditional perimeter security assumes threats come from outside. But once an attacker is inside your network, a flat network lets them move laterally to critical systems within minutes.</p>
-          <p>We&#39;ve partnered with Zero Networks to deploy automated, identity-based microsegmentation — isolating every device so a breach in one place can&#39;t spread. Deployment takes days, not months.</p>
-          <ul>
-            <li>Automatic policy generation from observed traffic</li>
-            <li>Identity-based access control, MFA-enforced</li>
-            <li>No agents, no network redesign</li>
-          </ul>
-        </div>
-        <div class="post-tags">
-          <span class="post-tag">Cybersecurity</span>
-          <span class="post-tag">Zero Trust</span>
-          <span class="post-tag">Microsegmentation</span>
-        </div>
-        <div class="post-actions">
-          <button class="post-action"><svg viewBox="0 0 24 24"><use href="#icon-award"/></svg>Like</button>
-          <button class="post-action"><svg viewBox="0 0 24 24"><use href="#icon-mail"/></svg>Comment</button>
-          <button class="post-action"><svg viewBox="0 0 24 24"><use href="#icon-arrow-up-right"/></svg>Share</button>
-          <a class="post-action cta" href="cybersecurity.html"><svg viewBox="0 0 24 24"><use href="#icon-arrow-up-right"/></svg>Explore microsegmentation</a>
-        </div>
-      </article>
-
-      <!-- POST 3 -->
-      <article class="post-card">
-        <div class="post-head">
-          <div class="post-avatar">NS</div>
-          <div class="post-author">
-            <div class="post-author-name">Netability Singapore</div>
-            <div class="post-author-title">IT Security, Cloud & MAS Compliance</div>
-            <div class="post-meta">5 June 2026 · 2 min read</div>
-          </div>
-        </div>
-        <div class="post-body">
-          <h3>Netability marks over 20 years of IT engineering across Singapore, Switzerland and Hong Kong</h3>
-          <p>Since 2003, we&#39;ve grown from a Swiss-born system integrator into a trusted partner for Singapore enterprises and MAS-regulated financial institutions. Our approach hasn&#39;t changed: honesty, team spirit, and trust — the Neta-Way.</p>
-          <p>Thank you to every client and partner who has been part of the journey.</p>
-        </div>
-        <div class="post-tags">
-          <span class="post-tag">Company</span>
-          <span class="post-tag">Milestone</span>
-        </div>
-        <div class="post-actions">
-          <button class="post-action"><svg viewBox="0 0 24 24"><use href="#icon-award"/></svg>Like</button>
-          <button class="post-action"><svg viewBox="0 0 24 24"><use href="#icon-mail"/></svg>Comment</button>
-          <button class="post-action"><svg viewBox="0 0 24 24"><use href="#icon-arrow-up-right"/></svg>Share</button>
-          <a class="post-action cta" href="about.html"><svg viewBox="0 0 24 24"><use href="#icon-arrow-up-right"/></svg>About Netability</a>
-        </div>
-      </article>
-      <!-- ═══ END POSTS ═══ -->
-
-  </div>
 
 <footer>
     <div class="footer-inner">
@@ -303,5 +221,118 @@
   </footer>
 
 <script src="js/main.js"></script>
+<script>
+(function(){
+  // ── Config ──
+  var GH_OWNER = 'dmario2204';               // repo owner
+  var GH_REPO  = 'netability-website';        // repo name
+  var GH_BRANCH = 'main';
+  var POSTS_DIR = 'content/news';
+  var API = 'https://api.github.com/repos/' + GH_OWNER + '/' + GH_REPO + '/contents/' + POSTS_DIR + '?ref=' + GH_BRANCH;
+
+  var container = document.getElementById('posts-container');
+
+  function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+  // Minimal front-matter + markdown parser (headings, bold, links, lists, paragraphs)
+  function parseFrontMatter(text){
+    var fm = {}, body = text;
+    var m = text.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
+    if(m){
+      body = m[2];
+      var lines = m[1].split('\n'), key=null;
+      lines.forEach(function(line){
+        var kv = line.match(/^(\w+):\s*(.*)$/);
+        if(kv){
+          key = kv[1];
+          var val = kv[2].trim();
+          if(val === ''){ fm[key] = []; }              // start of a list
+          else { fm[key] = val.replace(/^["']|["']$/g,''); }
+        } else {
+          var item = line.match(/^\s*-\s*(.+)$/);
+          if(item && Array.isArray(fm[key])){ fm[key].push(item[1].replace(/^["']|["']$/g,'')); }
+        }
+      });
+    }
+    return { fm: fm, body: body.trim() };
+  }
+
+  function mdToHtml(md){
+    var lines = md.split('\n'), html='', inList=false;
+    function inline(t){
+      t = esc(t);
+      t = t.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
+      t = t.replace(/\[([^\]]+)\]\(([^)]+)\)/g,'<a href="$2">$1</a>');
+      return t;
+    }
+    lines.forEach(function(line){
+      if(/^\s*-\s+/.test(line)){
+        if(!inList){ html+='<ul>'; inList=true; }
+        html += '<li>'+inline(line.replace(/^\s*-\s+/,''))+'</li>';
+      } else {
+        if(inList){ html+='</ul>'; inList=false; }
+        if(/^###\s+/.test(line)) html+='<h4>'+inline(line.replace(/^###\s+/,''))+'</h4>';
+        else if(/^##\s+/.test(line)) html+='<h3>'+inline(line.replace(/^##\s+/,''))+'</h3>';
+        else if(line.trim()==='') { /* skip */ }
+        else html+='<p>'+inline(line)+'</p>';
+      }
+    });
+    if(inList) html+='</ul>';
+    return html;
+  }
+
+  function fmtDate(d){
+    try{
+      var dt = new Date(d);
+      return dt.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+    }catch(e){ return d; }
+  }
+
+  function renderPost(fm, bodyHtml){
+    var tags = (fm.tags||[]).map(function(t){ return '<span class="post-tag">'+esc(t)+'</span>'; }).join('');
+    var img = fm.image ? '<img class="post-image" src="'+esc(fm.image)+'" alt="">' : '';
+    var cta = (fm.cta_text && fm.cta_link)
+      ? '<a class="post-action cta" href="'+esc(fm.cta_link)+'"><svg viewBox="0 0 24 24"><use href="#icon-arrow-up-right"/></svg>'+esc(fm.cta_text).replace(/\s*→\s*$/,'')+'</a>'
+      : '';
+    return '<article class="post-card">'
+      + '<div class="post-head">'
+      +   '<div class="post-avatar">NS</div>'
+      +   '<div class="post-author">'
+      +     '<div class="post-author-name">'+esc(fm.author||'Netability Singapore')+'</div>'
+      +     '<div class="post-author-title">'+esc(fm.author_title||'IT Security, Cloud & MAS Compliance')+'</div>'
+      +     '<div class="post-meta">'+fmtDate(fm.date)+'</div>'
+      +   '</div>'
+      + '</div>'
+      + '<div class="post-body"><h3>'+esc(fm.title||'Untitled')+'</h3>'+bodyHtml+'</div>'
+      + img
+      + (tags ? '<div class="post-tags">'+tags+'</div>' : '')
+      + '<div class="post-actions">'
+      +   '<button class="post-action"><svg viewBox="0 0 24 24"><use href="#icon-award"/></svg>Like</button>'
+      +   '<button class="post-action"><svg viewBox="0 0 24 24"><use href="#icon-mail"/></svg>Comment</button>'
+      +   '<button class="post-action"><svg viewBox="0 0 24 24"><use href="#icon-arrow-up-right"/></svg>Share</button>'
+      +   cta
+      + '</div>'
+      + '</article>';
+  }
+
+  fetch(API)
+    .then(function(r){ if(!r.ok) throw new Error('list'); return r.json(); })
+    .then(function(files){
+      var mdFiles = files.filter(function(f){ return /\.md$/.test(f.name); });
+      if(mdFiles.length === 0){ container.innerHTML = '<p class="posts-empty">No posts yet.</p>'; return; }
+      // newest first by filename (they start with YYYY-MM-DD)
+      mdFiles.sort(function(a,b){ return b.name.localeCompare(a.name); });
+      return Promise.all(mdFiles.map(function(f){
+        return fetch(f.download_url).then(function(r){ return r.text(); })
+          .then(function(text){ var p = parseFrontMatter(text); return renderPost(p.fm, mdToHtml(p.body)); });
+      })).then(function(cards){ container.innerHTML = cards.join(''); });
+    })
+    .catch(function(err){
+      container.innerHTML = '<p class="posts-empty">Posts couldn\'t load right now. Please try again later.</p>';
+      console.error(err);
+    });
+})();
+</script>
+
 </body>
 </html>
