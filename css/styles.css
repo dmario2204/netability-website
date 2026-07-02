@@ -40,11 +40,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,
 .nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:68px;gap:1rem}
 .nav-logo{cursor:pointer;display:flex;align-items:center;flex-shrink:0}
 .nav-logo img{height:34px;width:auto}
-.nav-links{display:flex;align-items:center;gap:0.1rem;flex-wrap:nowrap}
+.nav-links{display:flex;align-items:center;gap:0.3rem;flex-wrap:nowrap;margin-left:auto}
 .nav-link{font-size:0.76rem;font-weight:500;padding:0.42rem 0.6rem;border-radius:6px;cursor:pointer;color:var(--text2);transition:all 0.15s;white-space:nowrap}
 .nav-link:hover{background:var(--bg2);color:var(--brand)}
 .nav-link.active{color:var(--brand);background:var(--brand-dim);font-weight:600}
-.nav-cta{background:var(--brand);color:#fff;font-size:0.8rem;font-weight:600;padding:0.5rem 1.1rem;border-radius:7px;cursor:pointer;transition:background 0.2s;white-space:nowrap;border:none;font-family:'DM Sans',sans-serif;flex-shrink:0}
+.nav-cta{background:var(--brand);color:#fff;font-size:0.8rem;font-weight:600;padding:0.5rem 1.1rem;border-radius:7px;cursor:pointer;transition:background 0.2s;white-space:nowrap;border:none;font-family:'DM Sans',sans-serif;flex-shrink:0;margin-left:1rem}
 .nav-cta:hover{background:var(--brand2)}
 .hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:4px}
 .hamburger span{display:block;width:20px;height:2px;background:var(--text);border-radius:2px}
@@ -357,7 +357,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,
 
 /* Icon box */
 .cc-icon-box{
-  position:absolute;top:1.4rem;right:1.3rem;z-index:3;
+  position:absolute;top:1.4rem;left:1.3rem;z-index:3;
   width:46px;height:46px;border-radius:12px;
   display:flex;align-items:center;justify-content:center;
   flex-shrink:0;
@@ -390,7 +390,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,
 .cc-5 .cc-seg{background:var(--c5d);color:var(--c5)}
 
 /* Title & desc */
-.cc-body{display:flex;flex-direction:column;flex:1;position:relative;z-index:1;padding-top:0.2rem}
+.cc-body{display:flex;flex-direction:column;flex:1;position:relative;z-index:1;padding-top:3.6rem}
 .cc-title{
   font-family:'DM Serif Display',serif;
   font-size:1.05rem;font-weight:400;
