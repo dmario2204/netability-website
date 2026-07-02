@@ -2,17 +2,20 @@ backend:
   name: github
   repo: dmario2204/netability-website
   branch: main
+  # After deploying the OAuth Worker (see CMS-SETUP-GUIDE.md Part A),
+  # uncomment the next line and replace with your Worker URL:
+  # base_url: https://netability-cms-auth.YOUR-SUBDOMAIN.workers.dev
 
 # Where uploaded images go
 media_folder: "images/news"
 public_folder: "images/news"
 
-# Editorial workflow lets posts be drafted before publishing
+# Editorial workflow lets posts be drafted/reviewed before publishing
 publish_mode: editorial_workflow
 
 collections:
   - name: "news"
-    label: "News Posts"
+    label: "Posts"
     folder: "content/news"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
