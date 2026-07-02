@@ -879,3 +879,71 @@ footer{background:var(--text);color:#fff;padding:3rem 2rem 2rem}
 @keyframes posts-spin{to{transform:rotate(360deg)}}
 .posts-empty{text-align:center;padding:3rem 0;color:var(--slate);font-size:0.95rem}
 .post-body h4{font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:700;color:var(--text);margin:0.6rem 0 0.4rem}
+
+
+/* ══════════════════════════════════════════
+   TOOLS PAGE — downloads + external tool cards
+══════════════════════════════════════════ */
+.tools-wrap{max-width:1200px;margin:0 auto;padding:3.5rem 2rem 5rem}
+.tools-section{margin-bottom:3.5rem}
+.tools-section-head{margin-bottom:1.8rem}
+.tools-section-head .section-eye{margin-bottom:0.5rem}
+.tools-section-head h2{font-family:'DM Serif Display',serif;font-size:1.7rem;font-weight:400;color:var(--text);letter-spacing:-0.01em;margin-bottom:0.4rem}
+.tools-section-head p{font-size:0.92rem;color:var(--slate);max-width:640px;line-height:1.6}
+
+/* Grid of tool cards */
+.tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+
+/* Download card */
+.tool-card{
+  background:#fff;border:1.5px solid var(--border);border-radius:16px;
+  padding:1.6rem;display:flex;flex-direction:column;
+  transition:border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  position:relative;overflow:hidden;
+}
+.tool-card:hover{border-color:var(--border2);box-shadow:0 12px 32px rgba(53,48,190,0.1);transform:translateY(-3px)}
+.tool-card-top{position:absolute;top:0;left:0;right:0;height:3px}
+.tool-ico{
+  width:52px;height:52px;border-radius:13px;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:1.1rem;font-size:1.5rem;
+}
+.tool-ico svg{width:26px;height:26px;stroke-width:1.7}
+.tool-card h3{font-size:1.02rem;font-weight:700;color:var(--text);margin-bottom:0.35rem}
+.tool-card .tool-platform{font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--slate);margin-bottom:0.6rem}
+.tool-card p{font-size:0.85rem;color:var(--slate);line-height:1.55;margin-bottom:1.2rem;flex:1}
+.tool-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;
+  background:var(--brand);color:#fff;font-weight:600;font-size:0.85rem;
+  padding:0.7rem 1rem;border-radius:9px;text-decoration:none;
+  transition:background 0.2s;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;width:100%;
+}
+.tool-btn:hover{background:var(--brand2)}
+.tool-btn svg{width:16px;height:16px;stroke-width:2}
+.tool-btn.disabled{background:var(--bg3);color:var(--slate);cursor:not-allowed;pointer-events:none}
+
+/* External link card — slightly different accent */
+.tool-link-card{
+  background:#fff;border:1.5px solid var(--border);border-radius:16px;
+  padding:1.6rem;display:flex;align-items:center;gap:1.2rem;
+  text-decoration:none;transition:border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.tool-link-card:hover{border-color:var(--border2);box-shadow:0 12px 32px rgba(53,48,190,0.1);transform:translateY(-3px)}
+.tool-link-ico{
+  width:54px;height:54px;border-radius:13px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+}
+.tool-link-ico svg{width:26px;height:26px;stroke-width:1.7}
+.tool-link-body{flex:1;min-width:0}
+.tool-link-body h3{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:0.2rem;display:flex;align-items:center;gap:0.4rem}
+.tool-link-body p{font-size:0.83rem;color:var(--slate);line-height:1.5}
+.tool-link-arrow{color:var(--brand);flex-shrink:0;transition:transform 0.2s}
+.tool-link-card:hover .tool-link-arrow{transform:translate(3px,-3px)}
+.tool-link-arrow svg{width:20px;height:20px;stroke-width:2}
+
+@media(max-width:900px){.tools-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){
+  .tools-wrap{padding:2.5rem 1.2rem 3rem}
+  .tools-grid{grid-template-columns:1fr}
+  .tool-link-card{flex-direction:row}
+}
