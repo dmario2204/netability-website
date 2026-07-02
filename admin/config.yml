@@ -4,7 +4,7 @@ backend:
   branch: main
   # After deploying the OAuth Worker (see CMS-SETUP-GUIDE.md Part A),
   # uncomment the next line and replace with your Worker URL:
-  # base_url: https://netability-cms-auth.YOUR-SUBDOMAIN.workers.dev
+  base_url: https://sveltia-cms-auth.netability-singapore-pte-ltd.workers.dev
 
 # Where uploaded images go
 media_folder: "images/news"
