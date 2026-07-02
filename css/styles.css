@@ -227,8 +227,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,
 }
 
 /* ── LEAD CARD ── */
-.lead-card{background:#FAFAFA;border-radius:14px;padding:2rem;box-shadow:0 20px 60px rgba(0,0,0,0.28);border:1px solid rgba(255,255,255,0.15)}
-.lead-card-top{height:4px;border-radius:14px 14px 0 0;margin:-2rem -2rem 1.4rem;background:linear-gradient(90deg,var(--brand),var(--grad-end),var(--grad-mid))}
+.lead-card{background:#FAFAFA;border-radius:14px;padding:2rem;box-shadow:0 20px 60px rgba(0,0,0,0.28);overflow:hidden}
+.lead-card-top{height:4px;margin:-2rem -2rem 1.4rem;background:linear-gradient(90deg,var(--brand),var(--grad-end),var(--grad-mid))}
 .lead-card h3{font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--text);margin-bottom:0.3rem;font-weight:400}
 .lead-card .sub{font-size:0.81rem;color:var(--slate);margin-bottom:1.3rem}
 .form-group{margin-bottom:0.85rem}
