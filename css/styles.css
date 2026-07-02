@@ -807,3 +807,68 @@ footer{background:var(--text);color:#fff;padding:3rem 2rem 2rem}
   .h-stat{flex:0 0 100%}
   .section-title{font-size:1.5rem}
 }
+
+
+/* ══════════════════════════════════════════
+   HOME HERO — robust mobile fix (highest priority)
+══════════════════════════════════════════ */
+@media(max-width:768px){
+  /* Kill the desktop 2-column grid completely */
+  section.hero .hero-inner{
+    display:block !important;
+    grid-template-columns:none !important;
+    max-width:100% !important;
+    padding:0 !important;
+    gap:0 !important;
+  }
+  /* Hide the lead-card form entirely on mobile */
+  section.hero .lead-card{display:none !important}
+
+  /* Hero section padding + no overflow */
+  section.hero{
+    padding:5rem 1.1rem 2.5rem !important;
+    overflow-x:hidden !important;
+  }
+  section.hero .hero-text{max-width:100% !important}
+
+  /* Eyebrow: allow wrap, smaller, no forced width */
+  section.hero .hero-eyebrow{
+    font-size:0.6rem !important;
+    white-space:normal !important;
+    line-height:1.35 !important;
+    padding:0.35rem 0.75rem !important;
+    max-width:100% !important;
+  }
+  /* Headline scales to viewport, never overflows */
+  section.hero h1{
+    font-size:1.9rem !important;
+    line-height:1.15 !important;
+    word-break:break-word !important;
+  }
+  section.hero .hero-text p{font-size:0.95rem !important}
+
+  /* Buttons stack full-width, no horizontal overflow */
+  section.hero .hero-btns{
+    display:flex !important;
+    flex-direction:column !important;
+    width:100% !important;
+    gap:0.7rem !important;
+  }
+  section.hero .hero-btns .btn-primary,
+  section.hero .hero-btns .btn-ghost{
+    width:100% !important;
+    max-width:100% !important;
+    text-align:center !important;
+    justify-content:center !important;
+    box-sizing:border-box !important;
+  }
+
+  /* Stats: wrap to 2 per row, contained */
+  section.hero .hero-stats{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    gap:1.3rem 1.5rem !important;
+    max-width:100% !important;
+  }
+  section.hero .h-stat{flex:0 0 42% !important}
+}
