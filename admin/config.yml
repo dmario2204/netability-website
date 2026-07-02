@@ -2,8 +2,6 @@ backend:
   name: github
   repo: dmario2204/netability-website
   branch: main
-  # After deploying the OAuth Worker (see CMS-SETUP-GUIDE.md Part A),
-  # uncomment the next line and replace with your Worker URL:
   base_url: https://sveltia-cms-auth.netability-singapore-pte-ltd.workers.dev
 
 # Where uploaded images go
