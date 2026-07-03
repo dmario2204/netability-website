@@ -308,8 +308,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,
 .cubic-card:hover .cc-icon{stroke:#fff}
 .cubic-card:hover .cc-seg{background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.9)}
 .cubic-card:hover .cc-pills li{background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.85);border-color:rgba(255,255,255,0.2)}
-.cubic-card:hover 
-
 /* Per-card hover colour */
 .cc-1::before{background:linear-gradient(160deg,#5527DE,#7752E4)}
 .cc-2::before{background:linear-gradient(160deg,#5527DE,#2474CC)}
@@ -959,7 +957,6 @@ footer{background:var(--text);color:#fff;padding:3rem 2rem 2rem}
 /* Hero N graphic (replaces the old form on homepage) */
 .hero-visual{width:100%;display:flex;align-items:center;justify-content:flex-end;padding:0}
 .hero-n{width:270px;max-width:100%;height:auto;opacity:0.9;filter:drop-shadow(0 8px 32px rgba(85,39,222,0.28))}
-50%{transform:translateY(-12px)}}
 @media(max-width:1060px){
   .hero-visual{width:100%;display:flex;align-items:center;justify-content:flex-end;padding:0}
   .hero-n{width:270px;max-width:100%;height:auto;opacity:0.9;filter:drop-shadow(0 8px 32px rgba(85,39,222,0.28))}
