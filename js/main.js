@@ -14,7 +14,7 @@ window.addEventListener('load', function(){
   window.scrollTo(0, 0);
 });
 
-// ── Form submission handler (Web3Forms, AJAX — no page redirect) ──
+// ── Form submission handler (→ Cloudflare Worker → Power Automate) ──
 function handleFormSubmit(form, successId){
   form.addEventListener('submit', function(e){
     e.preventDefault();
@@ -22,19 +22,31 @@ function handleFormSubmit(form, successId){
     var originalText = btn ? btn.textContent : '';
     if(btn){ btn.textContent = 'Sending…'; btn.disabled = true; }
 
-    var formData = new FormData(form);
-    var payload = {};
-    formData.forEach(function(value, key){ payload[key] = value; });
+    // Gather fields
+    var fd = new FormData(form);
+    var get = function(n){ return (fd.get(n) || '').toString().trim(); };
 
-    fetch('https://api.web3forms.com/submit', {
+    // Combine first + last name into a single 'name'
+    var fullName = (get('firstname') + ' ' + get('lastname')).trim();
+
+    var payload = {
+      name: fullName,
+      email: get('email'),
+      company: get('company'),
+      jobtitle: get('jobtitle'),
+      service: get('service'),
+      message: get('message'),
+      botcheck: get('botcheck')
+    };
+
+    fetch(form.action, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     })
-    .then(function(res){ return res.json(); })
+    .then(function(res){ return res.json().catch(function(){ return { success: res.ok }; }); })
     .then(function(data){
-      if(data.success){
-        // Hide the form, show the success message
+      if(data && data.success){
         form.style.display = 'none';
         var success = document.getElementById(successId);
         if(success) success.style.display = 'block';
@@ -50,7 +62,6 @@ function handleFormSubmit(form, successId){
   });
 }
 
-// Wire up both forms if present on the page
 window.addEventListener('DOMContentLoaded', function(){
   var homeForm = document.getElementById('lead-form-home');
   if(homeForm) handleFormSubmit(homeForm, 'lead-form-home-success');
