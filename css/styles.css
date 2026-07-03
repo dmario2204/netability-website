@@ -957,14 +957,14 @@ footer{background:var(--text);color:#fff;padding:3rem 2rem 2rem}
 .tool-badge-soon{display:inline-block;font-size:0.66rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:var(--slate);background:var(--bg3);padding:0.3rem 0.7rem;border-radius:100px;align-self:flex-start}
 
 /* Hero N graphic (replaces the old form on homepage) */
-.hero-visual{display:flex;align-items:center;justify-content:center;padding:1rem}
-.hero-n{width:100%;max-width:180px;height:auto;opacity:0.9;filter:drop-shadow(0 8px 32px rgba(85,39,222,0.3));animation:hero-n-float 6s ease-in-out infinite}
-@keyframes hero-n-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.hero-visual{width:100%;display:flex;align-items:center;justify-content:flex-end;padding:0}
+.hero-n{width:270px;max-width:100%;height:auto;opacity:0.9;filter:drop-shadow(0 8px 32px rgba(85,39,222,0.28))}
+50%{transform:translateY(-12px)}}
 @media(max-width:1060px){
-  .hero-visual{padding:0;margin-top:1.5rem}
-  .hero-n{max-width:130px}
+  .hero-visual{width:100%;display:flex;align-items:center;justify-content:flex-end;padding:0}
+  .hero-n{width:270px;max-width:100%;height:auto;opacity:0.9;filter:drop-shadow(0 8px 32px rgba(85,39,222,0.28))}
 }
 @media(max-width:768px){
   /* On mobile, hide the N to keep the hero compact (like the form was hidden) */
-  .hero-visual{display:none}
+  .hero-visual{width:100%;display:flex;align-items:center;justify-content:flex-end;padding:0}
 }
