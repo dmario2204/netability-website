@@ -1,0 +1,60 @@
+[
+  {
+    "title": "SSL/TLS certificates are getting shorter — here's the timeline to 47 days",
+    "author": "Netability Singapore",
+    "author_title": "IT Security, Cloud & MAS Compliance",
+    "date": "2026-07-08T13:49:00.000Z",
+    "category": "Security insight",
+    "tags": [
+      "Cybersecurity · PKI · Certificate Management"
+    ],
+    "image": "/images/news/ssl-certificate-validity-timeline.png",
+    "cta_text": "Talk to us about certificate automation",
+    "cta_link": "cybersecurity.html",
+    "body": "The industry is phasing out long-lived SSL/TLS certificates. Following CA/Browser Forum Ballot SC-081v3 — approved in April 2025 — the maximum validity of a public certificate drops from 398 days today to just 47 days by 2029.\n\nHere's the schedule every organisation should plan around:\n\n- Today — 398 days maximum validity\n- 15 March 2026 — 200 days maximum validity\n- 15 March 2027 — 100 days maximum validity\n- 15 March 2029 — 47 days maximum validity\n\nDomain validation reuse windows shrink in step, reaching just 10 days in 2029. In practice, manually renewing certificates once a year will no longer be viable — teams that don't automate face far more frequent renewals and a real risk of costly outages from expired certificates.\n\nThe changes apply to publicly-trusted certificates in the Chrome, Safari, Firefox and Edge trust stores. Internal PKIs are not affected.\n\nNetability helps organisations get ahead of this shift with automated certificate lifecycle management — discovery, issuance, renewal and monitoring — so expiries never take a service down. Talk to us before the first deadline in March 2026."
+  },
+  {
+    "title": "MAS FAA-N16 voice recording amendments: what financial advisers must do before the deadline",
+    "author": "Netability Singapore",
+    "author_title": "IT Cyber Security, Cloud & MAS Compliance",
+    "date": "2026-07-02T09:00:00.000Z",
+    "category": "Compliance update",
+    "tags": [
+      "MAS Compliance",
+      "FAA-N16",
+      "Voice Recording"
+    ],
+    "cta_text": "Learn about our voice recording solution",
+    "cta_link": "voice-recording.html",
+    "body": "The Monetary Authority of Singapore amended Notice FAA-N16 on 29 December 2025, tightening requirements for the recording and retention of client communications. Licensed and exempt financial advisers now face clearer obligations around mobile call capture and audit trails.\n\nOur compliance team has broken down the practical steps — from Tier 1 mobile recording to Microsoft Teams capture — to help your firm stay ahead of the requirements."
+  },
+  {
+    "title": "Why network microsegmentation stops ransomware where firewalls can't",
+    "author": "Netability Singapore",
+    "author_title": "IT Cyber Security, Cloud & MAS Compliance",
+    "date": "2026-06-18T09:00:00.000Z",
+    "category": "Security insight",
+    "tags": [
+      "Cybersecurity",
+      "Zero Trust",
+      "Microsegmentation"
+    ],
+    "cta_text": "Explore microsegmentation",
+    "cta_link": "cybersecurity.html",
+    "body": "Traditional perimeter security assumes threats come from outside. But once an attacker is inside your network, a flat network lets them move laterally to critical systems within minutes.\n\nWe've partnered with Zero Networks to deploy automated, identity-based microsegmentation — isolating every device so a breach in one place can't spread. Deployment takes days, not months.\n\n- Automatic policy generation from observed traffic\n- Identity-based access control, MFA-enforced\n- No agents, no network redesign"
+  },
+  {
+    "title": "Netability marks over 20 years of IT engineering across Singapore, Switzerland and Hong Kong",
+    "author": "Netability Singapore",
+    "author_title": "IT Cyber Security, Cloud & MAS Compliance",
+    "date": "2026-06-05T09:00:00.000Z",
+    "category": "Company news",
+    "tags": [
+      "Company",
+      "Milestone"
+    ],
+    "cta_text": "About Netability",
+    "cta_link": "about.html",
+    "body": "Since 2003, we've grown from a Swiss-born system integrator into a trusted partner for Singapore enterprises and MAS-regulated financial institutions. Our approach hasn't changed: honesty, team spirit, and trust — the Neta-Way.\n\nThank you to every client and partner who has been part of the journey."
+  }
+]
