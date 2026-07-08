@@ -1,0 +1,45 @@
+name: Build posts.json
+
+# Runs whenever a post is added/edited/removed in the CMS (which commits to
+# content/news/), or when the build script/workflow itself changes.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/news/**'
+      - 'scripts/build-posts.mjs'
+      - '.github/workflows/build-posts.yml'
+  workflow_dispatch:        # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write           # allows the action to commit posts.json back
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install gray-matter
+
+      - name: Build posts.json
+        run: node scripts/build-posts.mjs
+
+      - name: Commit posts.json if it changed
+        run: |
+          git config user.name "netability-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add posts.json
+          if git diff --staged --quiet; then
+            echo "posts.json is already up to date."
+          else
+            git commit -m "chore: rebuild posts.json [skip ci]"
+            git push
+          fi
