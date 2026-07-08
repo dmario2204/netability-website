@@ -235,42 +235,18 @@
 <script src="js/main.js"></script>
 <script>
 (function(){
-  // ── Config ──
-  var GH_OWNER = 'dmario2204';               // repo owner
-  var GH_REPO  = 'netability-website';        // repo name
-  var GH_BRANCH = 'main';
-  var POSTS_DIR = 'content/news';
-  var API = 'https://api.github.com/repos/' + GH_OWNER + '/' + GH_REPO + '/contents/' + POSTS_DIR + '?ref=' + GH_BRANCH;
+  // ── Posts now load from a single posts.json file built by GitHub Actions. ──
+  // Visitors never call GitHub directly, so the feed can't be rate-limited.
+  var POSTS_URL = 'posts.json';
+  var CACHE_KEY = 'netability_posts_v1';   // last good copy, kept in the browser
 
   var container = document.getElementById('posts-container');
 
   function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
-  // Minimal front-matter + markdown parser (headings, bold, links, lists, paragraphs)
-  function parseFrontMatter(text){
-    var fm = {}, body = text;
-    var m = text.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
-    if(m){
-      body = m[2];
-      var lines = m[1].split('\n'), key=null;
-      lines.forEach(function(line){
-        var kv = line.match(/^(\w+):\s*(.*)$/);
-        if(kv){
-          key = kv[1];
-          var val = kv[2].trim();
-          if(val === ''){ fm[key] = []; }              // start of a list
-          else { fm[key] = val.replace(/^["']|["']$/g,''); }
-        } else {
-          var item = line.match(/^\s*-\s*(.+)$/);
-          if(item && Array.isArray(fm[key])){ fm[key].push(item[1].replace(/^["']|["']$/g,'')); }
-        }
-      });
-    }
-    return { fm: fm, body: body.trim() };
-  }
-
+  // Markdown -> HTML (headings, bold, links, lists, paragraphs)
   function mdToHtml(md){
-    var lines = md.split('\n'), html='', inList=false;
+    var lines = (md||'').split('\n'), html='', inList=false;
     function inline(t){
       t = esc(t);
       t = t.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
@@ -296,8 +272,9 @@
   function fmtDate(d){
     try{
       var dt = new Date(d);
+      if(isNaN(dt)) return '';
       return dt.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
-    }catch(e){ return d; }
+    }catch(e){ return ''; }
   }
 
   function renderPost(fm, bodyHtml){
@@ -327,21 +304,28 @@
       + '</article>';
   }
 
-  fetch(API)
-    .then(function(r){ if(!r.ok) throw new Error('list'); return r.json(); })
-    .then(function(files){
-      var mdFiles = files.filter(function(f){ return /\.md$/.test(f.name); });
-      if(mdFiles.length === 0){ container.innerHTML = '<p class="posts-empty">No posts yet.</p>'; return; }
-      // newest first by filename (they start with YYYY-MM-DD)
-      mdFiles.sort(function(a,b){ return b.name.localeCompare(a.name); });
-      return Promise.all(mdFiles.map(function(f){
-        return fetch(f.download_url).then(function(r){ return r.text(); })
-          .then(function(text){ var p = parseFrontMatter(text); return renderPost(p.fm, mdToHtml(p.body)); });
-      })).then(function(cards){ container.innerHTML = cards.join(''); });
+  function render(list){
+    if(!Array.isArray(list) || list.length === 0){
+      container.innerHTML = '<p class="posts-empty">No posts yet.</p>';
+      return;
+    }
+    container.innerHTML = list.map(function(p){
+      return renderPost(p, mdToHtml(p.body));
+    }).join('');
+  }
+
+  fetch(POSTS_URL, { cache: 'no-cache' })
+    .then(function(r){ if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function(list){
+      render(list);
+      try{ localStorage.setItem(CACHE_KEY, JSON.stringify(list)); }catch(e){}
     })
     .catch(function(err){
-      container.innerHTML = '<p class="posts-empty">Posts couldn\'t load right now. Please try again later.</p>';
-      console.error(err);
+      console.error('posts.json failed, trying cached copy:', err);
+      var cached = null;
+      try{ cached = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null'); }catch(e){}
+      if(cached && cached.length){ render(cached); }
+      else { container.innerHTML = '<p class="posts-empty">Posts couldn\'t load right now. Please try again later.</p>'; }
     });
 })();
 </script>
