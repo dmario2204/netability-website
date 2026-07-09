@@ -556,6 +556,18 @@ footer{background:var(--text);color:#fff;padding:3rem 2rem 2rem}
 .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
 .footer-logo img{height:30px;width:auto;margin-bottom:1rem}
 .footer-desc{font-size:0.8rem;color:rgba(255,255,255,0.42);line-height:1.7;max-width:260px}
+/* Social icons — footer (LinkedIn / X) */
+.footer-social{display:flex;gap:0.55rem;margin-top:1.1rem}
+.footer-social a{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:34px;height:34px;border-radius:8px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.12);
+  transition:background .18s ease,border-color .18s ease,transform .18s ease;
+}
+.footer-social a:hover{background:var(--brand);border-color:var(--brand);transform:translateY(-1px)}
+.footer-social svg{width:16px;height:16px;display:block;fill:rgba(255,255,255,0.6);transition:fill .18s ease}
+.footer-social a:hover svg{fill:#fff}
 .footer-col h5{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.35);margin-bottom:0.9rem}
 .footer-col a{display:block;font-size:0.8rem;color:rgba(255,255,255,0.55);margin-bottom:0.55rem;cursor:pointer;transition:color 0.2s;text-decoration:none}
 .footer-col a:hover{color:#fff}
