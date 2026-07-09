@@ -283,6 +283,11 @@
     var cta = (fm.cta_text && fm.cta_link)
       ? '<a class="post-action cta" href="'+esc(fm.cta_link)+'"><svg viewBox="0 0 24 24"><use href="#icon-arrow-up-right"/></svg>'+esc(fm.cta_text).replace(/\s*→\s*$/,'')+'</a>'
       : '';
+    var title = '<h3>'+esc(fm.title||'Untitled')+'</h3>';
+    // Cover image (if any) sits full-width right below the title, above the body text.
+    var body = img
+      ? '<div class="post-body" style="padding-bottom:0.7rem">'+title+'</div>'+img+'<div class="post-body" style="padding-top:0.9rem">'+bodyHtml+'</div>'
+      : '<div class="post-body">'+title+bodyHtml+'</div>';
     return '<article class="post-card">'
       + '<div class="post-head">'
       +   '<div class="post-avatar">NS</div>'
@@ -292,8 +297,7 @@
       +     '<div class="post-meta">'+fmtDate(fm.date)+'</div>'
       +   '</div>'
       + '</div>'
-      + '<div class="post-body"><h3>'+esc(fm.title||'Untitled')+'</h3>'+bodyHtml+'</div>'
-      + img
+      + body
       + (tags ? '<div class="post-tags">'+tags+'</div>' : '')
       + '<div class="post-actions">'
       +   '<button class="post-action"><svg viewBox="0 0 24 24"><use href="#icon-award"/></svg>Like</button>'
