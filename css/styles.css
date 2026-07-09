@@ -568,6 +568,10 @@ footer{background:var(--text);color:#fff;padding:3rem 2rem 2rem}
 .footer-social a:hover{background:var(--brand);border-color:var(--brand);transform:translateY(-1px)}
 .footer-social svg{width:16px;height:16px;display:block;fill:rgba(255,255,255,0.6);transition:fill .18s ease}
 .footer-social a:hover svg{fill:#fff}
+/* Founder LinkedIn icon — About page */
+.founder-li{display:inline-flex;opacity:0.68;transition:opacity .18s ease,transform .18s ease}
+.founder-li:hover{opacity:1;transform:translateY(-1px)}
+.founder-li svg{width:15px;height:15px;display:block;fill:currentColor}
 .footer-col h5{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.35);margin-bottom:0.9rem}
 .footer-col a{display:block;font-size:0.8rem;color:rgba(255,255,255,0.55);margin-bottom:0.55rem;cursor:pointer;transition:color 0.2s;text-decoration:none}
 .footer-col a:hover{color:#fff}
