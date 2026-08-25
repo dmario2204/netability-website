@@ -272,7 +272,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,
 .urgency-flag{display:inline-flex;align-items:center;gap:6px;border-radius:6px;padding:0.32rem 0.75rem;font-size:0.73rem;font-weight:700;margin-bottom:0.9rem}
 .page-hero h1{font-family:'DM Serif Display',serif;font-size:2.5rem;font-weight:400;letter-spacing:-0.02em;line-height:1.1;margin-bottom:1rem;color:#fff}
 .page-hero h1 em{font-style:italic}
-.page-hero .tagline{font-size:0.96rem;color:rgba(255,255,255,0.55);max-width:640px;line-height:1.65}
+.page-hero .tagline{font-size:0.96rem;color:rgba(255,255,255,0.55);max-width:880px;line-height:1.65}
 
 /* ── DETAIL ── */
 .inner-page{max-width:1200px;margin:0 auto;padding:3rem 2rem 5rem}
