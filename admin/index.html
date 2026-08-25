@@ -8,7 +8,10 @@
 <link rel="icon" href="../images/logo.png">
 </head>
 <body>
-<!-- Sveltia CMS (modern successor to Decap CMS) -->
-<script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+<!-- Sveltia CMS (modern successor to Decap CMS)
+     type="module"        — required; newer builds ship as an ES module
+     data-cfasync="false" — stops Cloudflare Rocket Loader interfering
+     @0.198.0             — pinned, so a new release can't break this page overnight -->
+<script src="https://unpkg.com/@sveltia/cms@0.198.0/dist/sveltia-cms.js" type="module" data-cfasync="false"></script>
 </body>
 </html>
