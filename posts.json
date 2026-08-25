@@ -3,7 +3,7 @@
     "title": "New service: continuous MAS Cyber Hygiene scoring and board reporting",
     "author": "Netability Singapore",
     "author_title": "IT Security, Cloud & MAS Compliance",
-    "date": "2026-08-25T10:00:00.000Z",
+    "date": "2026-08-24T10:00:00.000Z",
     "category": "Company news",
     "tags": [
       "MAS Compliance, Cybersecurity, Cyber Hygiene"
@@ -11,7 +11,9 @@
     "image": "/images/news/mas-cyber-hygiene-domains.svg",
     "cta_text": "Book a cyber hygiene review",
     "cta_link": "mas-trm-compliance.html",
-    "body": "We've launched a dedicated MAS Cyber Hygiene service for financial institutions in Singapore — continuous assessment across all six domains of the Notice, with scored reports ready for management and board review at any time.\n\nThe Notice on Cyber Hygiene sets binding requirements in six areas:\n\n- **Administrative accounts** — securing every privileged account across systems, databases and network devices\n- **Security patches** — applying available patches to address vulnerabilities in a timely manner\n- **Security standards** — establishing and enforcing a baseline security standard\n- **Network perimeter defence** — restricting unauthorised traffic at the perimeter\n- **Malware protection** — deploying anti-malware measures on every system where available\n- **Multi-factor authentication** — MFA on all administrative accounts for critical systems, and on internet-facing accounts that reach customer information\n\nMost institutions we speak to can demonstrate compliance on the day of an assessment. Far fewer can show it held every day in between — and that gap is what surfaces during a review.\n\nOur service maps your environment against each of the six domains, scores your posture continuously rather than annually, and produces the evidence in a format your board and your regulator both accept. Where gaps appear, we remediate them with the same engineers who found them.\n\nIf you're a bank, insurer, capital markets or payment services licensee, this applies to you. Talk to us for a scoping review."
+    "body": "We've launched a dedicated MAS Cyber Hygiene service for financial institutions in Singapore — continuous assessment across all six domains of the Notice, with scored reports ready for management and board review at any time.\n\nThe Notice on Cyber Hygiene sets binding requirements in six areas:\n\n- **Administrative accounts** — securing every privileged account across systems, databases and network devices\n- **Security patches** — applying available patches to address vulnerabilities in a timely manner\n- **Security standards** — establishing and enforcing a baseline security standard\n- **Network perimeter defence** — restricting unauthorised traffic at the perimeter\n- **Malware protection** — deploying anti-malware measures on every system where available\n- **Multi-factor authentication** — MFA on all administrative accounts for critical systems, and on internet-facing accounts that reach customer information\n\nMost institutions we speak to can demonstrate compliance on the day of an assessment. Far fewer can show it held every day in between — and that gap is what surfaces during a review.\n\nOur service maps your environment against each of the six domains, scores your posture continuously rather than annually, and produces the evidence in a format your board and your regulator both accept. Where gaps appear, we remediate them with the same engineers who found them.\n\nIf you're a bank, insurer, capital markets or payment services licensee, this applies to you. Talk to us for a scoping review.",
+    "slug": "new-service-continuous-mas-cyber-hygiene-scoring-and-board-reporting",
+    "url": "/posts/new-service-continuous-mas-cyber-hygiene-scoring-and-board-reporting.html"
   },
   {
     "title": "MAS FAA-N16 voice recording amendments: what financial advisers must do before the deadline",
@@ -27,7 +29,9 @@
     "image": "",
     "cta_text": "Learn about our voice recording solution",
     "cta_link": "voice-recording.html",
-    "body": "The Monetary Authority of Singapore amended Notice FAA-N16 on 29 December 2025, tightening requirements for the recording and retention of client communications. Licensed and exempt financial advisers now face clearer obligations around mobile call capture and audit trails.\n\nOur compliance team has broken down the practical steps — from Tier 1 mobile recording to Microsoft Teams capture — to help your firm stay ahead of the requirements."
+    "body": "The Monetary Authority of Singapore amended Notice FAA-N16 on 29 December 2025, tightening requirements for the recording and retention of client communications. Licensed and exempt financial advisers now face clearer obligations around mobile call capture and audit trails.\n\nOur compliance team has broken down the practical steps — from Tier 1 mobile recording to Microsoft Teams capture — to help your firm stay ahead of the requirements.",
+    "slug": "mas-faa-n16-voice-recording",
+    "url": "/posts/mas-faa-n16-voice-recording.html"
   },
   {
     "title": "SSL/TLS certificates are getting shorter — here's the timeline to 47 days",
@@ -41,7 +45,9 @@
     "image": "/images/news/ssl-certificate-validity-timeline.png",
     "cta_text": "Talk to us about certificate automation",
     "cta_link": "cybersecurity.html",
-    "body": "The industry is phasing out long-lived SSL/TLS certificates. Following CA/Browser Forum Ballot SC-081v3 — approved in April 2025 — the maximum validity of a public certificate drops from 398 days today to just 47 days by 2029.\n\nHere's the schedule every organisation should plan around:\n\n- Today — 398 days maximum validity\n- 15 March 2026 — 200 days maximum validity\n- 15 March 2027 — 100 days maximum validity\n- 15 March 2029 — 47 days maximum validity\n\nDomain validation reuse windows shrink in step, reaching just 10 days in 2029. In practice, manually renewing certificates once a year will no longer be viable — teams that don't automate face far more frequent renewals and a real risk of costly outages from expired certificates.\n\nThe changes apply to publicly-trusted certificates in the Chrome, Safari, Firefox and Edge trust stores. Internal PKIs are not affected.\n\nNetability helps organisations get ahead of this shift with automated certificate lifecycle management — discovery, issuance, renewal and monitoring — so expiries never take a service down. Talk to us before the first deadline in March 2026."
+    "body": "The industry is phasing out long-lived SSL/TLS certificates. Following CA/Browser Forum Ballot SC-081v3 — approved in April 2025 — the maximum validity of a public certificate drops from 398 days today to just 47 days by 2029.\n\nHere's the schedule every organisation should plan around:\n\n- Today — 398 days maximum validity\n- 15 March 2026 — 200 days maximum validity\n- 15 March 2027 — 100 days maximum validity\n- 15 March 2029 — 47 days maximum validity\n\nDomain validation reuse windows shrink in step, reaching just 10 days in 2029. In practice, manually renewing certificates once a year will no longer be viable — teams that don't automate face far more frequent renewals and a real risk of costly outages from expired certificates.\n\nThe changes apply to publicly-trusted certificates in the Chrome, Safari, Firefox and Edge trust stores. Internal PKIs are not affected.\n\nNetability helps organisations get ahead of this shift with automated certificate lifecycle management — discovery, issuance, renewal and monitoring — so expiries never take a service down. Talk to us before the first deadline in March 2026.",
+    "slug": "ssl-tls-certificates-are-getting-shorter-—-here-s-the-timeline-to-47-days",
+    "url": "/posts/ssl-tls-certificates-are-getting-shorter-—-here-s-the-timeline-to-47-days.html"
   },
   {
     "title": "Why network microsegmentation stops ransomware where firewalls can't",
@@ -56,7 +62,9 @@
     ],
     "cta_text": "Explore microsegmentation",
     "cta_link": "cybersecurity.html",
-    "body": "Traditional perimeter security assumes threats come from outside. But once an attacker is inside your network, a flat network lets them move laterally to critical systems within minutes.\n\nWe've partnered with Zero Networks to deploy automated, identity-based microsegmentation — isolating every device so a breach in one place can't spread. Deployment takes days, not months.\n\n- Automatic policy generation from observed traffic\n- Identity-based access control, MFA-enforced\n- No agents, no network redesign"
+    "body": "Traditional perimeter security assumes threats come from outside. But once an attacker is inside your network, a flat network lets them move laterally to critical systems within minutes.\n\nWe've partnered with Zero Networks to deploy automated, identity-based microsegmentation — isolating every device so a breach in one place can't spread. Deployment takes days, not months.\n\n- Automatic policy generation from observed traffic\n- Identity-based access control, MFA-enforced\n- No agents, no network redesign",
+    "slug": "network-microsegmentation",
+    "url": "/posts/network-microsegmentation.html"
   },
   {
     "title": "Netability marks over 20 years of IT engineering across Singapore, Switzerland and Hong Kong",
@@ -70,6 +78,8 @@
     ],
     "cta_text": "About Netability",
     "cta_link": "about.html",
-    "body": "Since 2003, we've grown from a Swiss-born system integrator into a trusted partner for Singapore enterprises and MAS-regulated financial institutions. Our approach hasn't changed: honesty, team spirit, and trust — the Neta-Way.\n\nThank you to every client and partner who has been part of the journey."
+    "body": "Since 2003, we've grown from a Swiss-born system integrator into a trusted partner for Singapore enterprises and MAS-regulated financial institutions. Our approach hasn't changed: honesty, team spirit, and trust — the Neta-Way.\n\nThank you to every client and partner who has been part of the journey.",
+    "slug": "twenty-years",
+    "url": "/posts/twenty-years.html"
   }
 ]
