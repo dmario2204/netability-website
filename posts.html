@@ -235,14 +235,14 @@
 <script src="js/main.js"></script>
 <script>
 (function(){
-  // ── Posts now load from a single posts.json file built by GitHub Actions. ──
+  // ── Posts load from a single posts.json file built by GitHub Actions. ──
   // Visitors never call GitHub directly, so the feed can't be rate-limited.
   var POSTS_URL = 'posts.json';
   var CACHE_KEY = 'netability_posts_v1';   // last good copy, kept in the browser
 
   var container = document.getElementById('posts-container');
 
-  function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
   // Markdown -> HTML (headings, bold, links, lists, paragraphs)
   function mdToHtml(md){
@@ -283,11 +283,23 @@
     var cta = (fm.cta_text && fm.cta_link)
       ? '<a class="post-action cta" href="'+esc(fm.cta_link)+'"><svg viewBox="0 0 24 24"><use href="#icon-arrow-up-right"/></svg>'+esc(fm.cta_text).replace(/\s*→\s*$/,'')+'</a>'
       : '';
-    var title = '<h3>'+esc(fm.title||'Untitled')+'</h3>';
+
+    // Each post has its own page (built by the Action). Older entries may not
+    // yet have a url — fall back to a plain, unlinked title in that case.
+    var link  = fm.url || '';
+    var title = link
+      ? '<h3><a href="'+esc(link)+'" style="color:inherit;text-decoration:none">'+esc(fm.title||'Untitled')+'</a></h3>'
+      : '<h3>'+esc(fm.title||'Untitled')+'</h3>';
+
     // Cover image (if any) sits full-width right below the title, above the body text.
     var body = img
       ? '<div class="post-body" style="padding-bottom:0.7rem">'+title+'</div>'+img+'<div class="post-body" style="padding-top:0.9rem">'+bodyHtml+'</div>'
       : '<div class="post-body">'+title+bodyHtml+'</div>';
+
+    var shareBtn = link
+      ? '<button class="post-action js-share" data-url="'+esc(link)+'"><svg viewBox="0 0 24 24"><use href="#icon-arrow-up-right"/></svg>Share</button>'
+      : '<button class="post-action"><svg viewBox="0 0 24 24"><use href="#icon-arrow-up-right"/></svg>Share</button>';
+
     return '<article class="post-card">'
       + '<div class="post-head">'
       +   '<div class="post-avatar">NS</div>'
@@ -302,21 +314,48 @@
       + '<div class="post-actions">'
       +   '<button class="post-action"><svg viewBox="0 0 24 24"><use href="#icon-award"/></svg>Like</button>'
       +   '<button class="post-action"><svg viewBox="0 0 24 24"><use href="#icon-mail"/></svg>Comment</button>'
-      +   '<button class="post-action"><svg viewBox="0 0 24 24"><use href="#icon-arrow-up-right"/></svg>Share</button>'
+      +   shareBtn
       +   cta
       + '</div>'
       + '</article>';
   }
 
+  // A post goes live once its date has passed. Posts with no date, or with an
+  // unreadable date, are always shown — better to show a post than to lose one.
+  function isPublished(p){
+    if(!p || !p.date) return true;
+    var when = new Date(p.date);
+    if(isNaN(when.getTime())) return true;
+    return when.getTime() <= Date.now();
+  }
+
   function render(list){
-    if(!Array.isArray(list) || list.length === 0){
+    var visible = (Array.isArray(list) ? list : []).filter(isPublished);
+    if(visible.length === 0){
       container.innerHTML = '<p class="posts-empty">No posts yet.</p>';
       return;
     }
-    container.innerHTML = list.map(function(p){
+    container.innerHTML = visible.map(function(p){
       return renderPost(p, mdToHtml(p.body));
     }).join('');
   }
+
+  // Share = copy the post's full URL to the clipboard.
+  container.addEventListener('click', function(e){
+    var btn = e.target.closest ? e.target.closest('.js-share') : null;
+    if(!btn) return;
+    var full = location.origin + btn.getAttribute('data-url');
+    var done = function(){
+      var old = btn.innerHTML;
+      btn.innerHTML = 'Link copied';
+      setTimeout(function(){ btn.innerHTML = old; }, 1600);
+    };
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(full).then(done, function(){ window.prompt('Copy this link:', full); });
+    } else {
+      window.prompt('Copy this link:', full);
+    }
+  });
 
   fetch(POSTS_URL, { cache: 'no-cache' })
     .then(function(r){ if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
