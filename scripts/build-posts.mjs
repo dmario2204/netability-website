@@ -22,20 +22,24 @@ const esc = (s) => String(s ?? '')
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
   .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 
+// Combining accent marks (U+0300-U+036F), built from a plain ASCII string so
+// no unusual characters ever appear in this source file.
+const ACCENT_MARKS = new RegExp('[\\u0300-\\u036f]', 'g');
+
 // "2026-08-25-mas-cyber-hygiene.md" -> "mas-cyber-hygiene"
 // Strips the date prefix, then reduces everything to plain a-z0-9 and hyphens
-// so the URL stays clean when shared. Em-dashes, accents, apostrophes and
-// other punctuation the CMS may leave in a filename all become hyphens.
+// so the URL stays clean when shared. Em-dashes, accents, apostrophes and any
+// other punctuation the CMS leaves in a filename all collapse to hyphens.
 function baseSlug(filename) {
   return filename
     .replace(/\.md$/, '')
     .replace(/^\d{4}-\d{2}-\d{2}-/, '')
-    .normalize('NFKD')                 // separate accents from letters
-    .replace(/[̀-ͯ]/g, '')   // drop the accent marks
+    .normalize('NFKD')             // separate accents from their letters
+    .replace(ACCENT_MARKS, '')     // drop the accent marks
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')       // anything else becomes a hyphen
-    .replace(/-+/g, '-')               // collapse runs of hyphens
-    .replace(/^-|-$/g, '');            // trim hyphens from the ends
+    .replace(/[^a-z0-9]+/g, '-')   // anything else becomes a hyphen
+    .replace(/-+/g, '-')           // collapse runs of hyphens
+    .replace(/^-|-$/g, '');        // trim hyphens from the ends
 }
 
 // Cover images are stored by the CMS as "/images/news/x.png" (absolute).
@@ -107,7 +111,8 @@ for (const filename of filenames) {
 
   // Keep the date prefix only if two posts would otherwise share a slug.
   let slug = baseSlug(filename);
-  if (usedSlugs.has(slug)) slug = filename.replace(/\.md$/, '');
+  if (!slug) slug = 'post';
+  if (usedSlugs.has(slug)) slug = baseSlug(filename.replace(/\.md$/, '') + '-' + usedSlugs.size);
   usedSlugs.add(slug);
 
   posts.push({
@@ -158,7 +163,7 @@ const NAV = `
   <a class="nav-link" href="../tools.html">Tools</a>
   <a class="nav-link" href="../about.html">About Us</a>
   <a class="nav-link" href="../contact.html">Contact</a>
-  <button class="nav-cta" onclick="window.location.href='../contact.html'">Get a Free Assessment →</button>
+  <button class="nav-cta" onclick="window.location.href='../contact.html'">Get a Free Assessment</button>
 </div>`;
 
 const FOOTER = `
@@ -178,7 +183,7 @@ const FOOTER = `
       <div class="footer-col"><h5>Singapore Office</h5><a href="tel:+6568173611">+65 6817 3611</a><a href="https://www.google.com/maps/search/?api=1&amp;query=883+North+Bridge+Road+Southbank+Singapore+198785" target="_blank" rel="noopener" aria-label="Open our Singapore office in Google Maps">883 North Bridge Road<br>Southbank #05-04<br>Singapore 198785</a></div>
     </div>
     <hr class="footer-divider">
-    <div class="footer-bottom"><p>© 2026 Netability (Singapore) Pte Ltd · UEN 200614711H · <a href="../legal/privacy-policy.pdf" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Privacy Policy</a></p><p>Swiss-founded · Singapore-based · MAS TRM Specialists</p></div>
+    <div class="footer-bottom"><p>&copy; 2026 Netability (Singapore) Pte Ltd &middot; UEN 200614711H &middot; <a href="../legal/privacy-policy.pdf" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Privacy Policy</a></p><p>Swiss-founded &middot; Singapore-based &middot; MAS TRM Specialists</p></div>
   </div>
 </footer>`;
 
@@ -211,7 +216,7 @@ function page(p) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${esc(p.title)} — Netability Singapore</title>
+<title>${esc(p.title)} &mdash; Netability Singapore</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${esc(url)}">
 <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
@@ -248,7 +253,7 @@ ${NAV}
     <button class="back-btn" onclick="window.location.href='../posts.html'">Back to posts</button>
     ${p.category ? `<div class="page-badge" style="background:rgba(85,39,222,0.15);border:1px solid rgba(85,39,222,0.3);color:#C5B8F2">${esc(p.category)}</div>` : ''}
     <h1>${esc(p.title)}</h1>
-    <p class="tagline">${esc(p.author || 'Netability Singapore')}${p.date ? ` · ${esc(fmtDate(p.date))}` : ''}</p>
+    <p class="tagline">${esc(p.author || 'Netability Singapore')}${p.date ? ` &middot; ${esc(fmtDate(p.date))}` : ''}</p>
   </div>
 </section>
 
@@ -262,7 +267,7 @@ ${NAV}
 
   <div style="display:flex;align-items:center;gap:0.7rem;margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid var(--border)">
     <span style="font-size:0.8rem;color:var(--slate);font-weight:600">Share</span>
-    <a class="footer-social-share" href="${esc(shareLinkedIn)}" target="_blank" rel="noopener" aria-label="Share on LinkedIn"
+    <a href="${esc(shareLinkedIn)}" target="_blank" rel="noopener" aria-label="Share on LinkedIn"
        style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;background:var(--bg2);border:1px solid var(--border)">
       <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:var(--slate)"><use href="#icon-linkedin"/></svg></a>
     <a href="${esc(shareX)}" target="_blank" rel="noopener" aria-label="Share on X"
