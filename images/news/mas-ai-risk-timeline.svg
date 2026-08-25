@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="628" viewBox="0 0 1200 628" role="img" aria-label="Timeline of the MAS Guidelines on AI Risk Management, from consultation in November 2025 to the end of the proposed twelve-month transition period">
+  <title>MAS AI Risk Management Guidelines — timeline</title>
+  <defs>
+    <radialGradient id="ag1" cx="72%" cy="28%" r="60%">
+      <stop offset="0%" stop-color="#2958BE" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#2958BE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ag2" cx="18%" cy="82%" r="55%">
+      <stop offset="0%" stop-color="#1E3C96" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#1E3C96" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="abase" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0%" stop-color="#0A1733"/>
+      <stop offset="100%" stop-color="#050B1E"/>
+    </linearGradient>
+    <linearGradient id="atrack" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5AA0F0"/>
+      <stop offset="45%" stop-color="#5AA0F0"/>
+      <stop offset="55%" stop-color="#7752E4"/>
+      <stop offset="100%" stop-color="#5527DE"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="628" fill="url(#abase)"/>
+  <rect width="1200" height="628" fill="url(#ag1)"/>
+  <rect width="1200" height="628" fill="url(#ag2)"/>
+
+  <g font-family="'DM Sans','Segoe UI',Arial,sans-serif">
+
+    <g transform="translate(80,72)">
+      <rect x="0" y="0" width="246" height="27" rx="13.5" fill="#5527DE" fill-opacity="0.18" stroke="#7752E4" stroke-opacity="0.45"/>
+      <circle cx="16" cy="13.5" r="3.5" fill="#5AA0F0"/>
+      <text x="30" y="18" font-size="12" font-weight="600" letter-spacing="1.1" fill="#A8C8F0">AI RISK MANAGEMENT</text>
+    </g>
+
+    <text x="80" y="162" font-size="42" font-weight="700" fill="#FFFFFF">The transition clock</text>
+    <text x="80" y="204" font-size="21" fill="#8FA6C8">MAS Guidelines on AI Risk Management — where things stand</text>
+
+    <line x1="118" y1="330" x2="1082" y2="330" stroke="url(#atrack)" stroke-width="3" stroke-linecap="round"/>
+
+    <g>
+      <circle cx="140" cy="330" r="11" fill="#0A1733" stroke="#5AA0F0" stroke-width="3.5"/>
+      <text x="140" y="292" font-size="15" font-weight="700" text-anchor="middle" fill="#5AA0F0">DONE</text>
+      <text x="140" y="380" font-size="20" font-weight="600" text-anchor="middle" fill="#FFFFFF">Nov 2025</text>
+      <text x="140" y="406" font-size="14" text-anchor="middle" fill="#8FA6C8">Consultation opened</text>
+    </g>
+
+    <g>
+      <circle cx="447" cy="330" r="11" fill="#0A1733" stroke="#5AA0F0" stroke-width="3.5"/>
+      <text x="447" y="292" font-size="15" font-weight="700" text-anchor="middle" fill="#5AA0F0">DONE</text>
+      <text x="447" y="380" font-size="20" font-weight="600" text-anchor="middle" fill="#FFFFFF">31 Jan 2026</text>
+      <text x="447" y="406" font-size="14" text-anchor="middle" fill="#8FA6C8">Consultation closed</text>
+    </g>
+
+    <g>
+      <circle cx="754" cy="330" r="13" fill="#5527DE" stroke="#9B7BFF" stroke-width="3.5"/>
+      <text x="754" y="292" font-size="15" font-weight="700" text-anchor="middle" fill="#B9A3FF">NEXT</text>
+      <text x="754" y="380" font-size="20" font-weight="600" text-anchor="middle" fill="#FFFFFF">&#8220;Soon&#8221;</text>
+      <text x="754" y="406" font-size="14" text-anchor="middle" fill="#8FA6C8">Guidelines finalised</text>
+    </g>
+
+    <g>
+      <circle cx="1061" cy="330" r="11" fill="#0A1733" stroke="#7752E4" stroke-width="3.5" stroke-dasharray="4 3"/>
+      <text x="1061" y="292" font-size="15" font-weight="700" text-anchor="middle" fill="#9B7BFF">THEN</text>
+      <text x="1061" y="380" font-size="20" font-weight="600" text-anchor="middle" fill="#FFFFFF">+12 months</text>
+      <text x="1061" y="406" font-size="14" text-anchor="middle" fill="#8FA6C8">Transition ends</text>
+    </g>
+
+    <g transform="translate(80,458)">
+      <rect width="1040" height="62" rx="12" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.11"/>
+      <rect x="0" y="0" width="3" height="62" rx="1.5" fill="#5527DE"/>
+      <text x="24" y="27" font-size="15" font-weight="600" fill="#FFFFFF">Start with the AI inventory</text>
+      <text x="24" y="49" font-size="14" fill="#8FA6C8">Copilot, AI features enabled by default in your SaaS, models embedded in vendor products — all of it counts.</text>
+    </g>
+
+    <line x1="80" y1="556" x2="1120" y2="556" stroke="#FFFFFF" stroke-opacity="0.1"/>
+    <text x="80" y="588" font-size="16" font-weight="600" fill="#FFFFFF">Netability Singapore</text>
+    <text x="1120" y="588" font-size="13" text-anchor="end" fill="#7189AB">netability.sg</text>
+  </g>
+</svg>
