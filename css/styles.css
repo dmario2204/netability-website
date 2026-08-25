@@ -591,36 +591,53 @@ footer{background:var(--text);color:#fff;padding:3rem 2rem 2rem}
   margin:0 auto;
   padding:3rem 2rem 5rem;
 }
-
+ 
 /* The "Sharing what we're learning…" bar spans the full width */
 .posts-compose{
   max-width:none;
 }
-
-/* Two columns of cards. Each card stays a comfortable reading width,
-   while the feed as a whole lines up with the header. */
+ 
+/* One column, full width */
 #posts-container{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:1.5rem;
-  align-items:start;      /* cards keep their natural height, no stretching */
+  grid-template-columns:1fr;
+  gap:1.75rem;
 }
-
+ 
 /* Spacing now comes from the grid gap, not from each card */
 .post-card{
   margin-bottom:0;
 }
-
-/* Loading spinner and "no posts" message should span both columns */
+ 
+/* Cover images are 1200x628. At full card width the old 440px cap would crop
+   the top and bottom off them, so let them show at their natural proportions. */
+.post-image{
+  max-height:none;
+  height:auto;
+  object-fit:contain;
+}
+ 
+/* Body text is held to a comfortable reading width. Very long lines are hard
+   to follow — this keeps the card full width while the text stays readable.
+   To let the text run the entire width instead, delete this block. */
+.post-body{
+  max-width:900px;
+}
+ 
+/* Slightly larger title, now that each card has the room for it */
+.post-body h3{
+  font-size:1.3rem;
+}
+ 
+/* Loading spinner and "no posts" message span the column */
 .posts-loading,
 .posts-empty{
   grid-column:1 / -1;
 }
-
-/* Tablet and below — one column, still full width */
-@media(max-width:900px){
-  #posts-container{
-    grid-template-columns:1fr;
-    gap:1.25rem;
-  }
+ 
+/* Phones — tighter gap, and cap image height again so posts stay scrollable */
+@media(max-width:680px){
+  #posts-container{gap:1.25rem}
+  .post-body h3{font-size:1.12rem}
+  .post-image{max-height:320px;object-fit:cover}
 }
