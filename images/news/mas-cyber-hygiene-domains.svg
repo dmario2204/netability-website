@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="628" viewBox="0 0 1200 628" role="img" aria-label="The six domains of the MAS Notice on Cyber Hygiene">
+  <title>MAS Cyber Hygiene — the six domains</title>
+  <defs>
+    <radialGradient id="glow1" cx="72%" cy="28%" r="60%">
+      <stop offset="0%" stop-color="#2958BE" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#2958BE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="18%" cy="82%" r="55%">
+      <stop offset="0%" stop-color="#1E3C96" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#1E3C96" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="base" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0%" stop-color="#0A1733"/>
+      <stop offset="100%" stop-color="#050B1E"/>
+    </linearGradient>
+    <linearGradient id="pill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7752E4"/>
+      <stop offset="100%" stop-color="#5527DE"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="628" fill="url(#base)"/>
+  <rect width="1200" height="628" fill="url(#glow1)"/>
+  <rect width="1200" height="628" fill="url(#glow2)"/>
+
+  <g font-family="'DM Sans','Segoe UI',Arial,sans-serif">
+
+    <g transform="translate(80,74)">
+      <rect x="0" y="0" width="212" height="27" rx="13.5" fill="#5527DE" fill-opacity="0.18" stroke="#7752E4" stroke-opacity="0.45"/>
+      <circle cx="16" cy="13.5" r="3.5" fill="#5AA0F0"/>
+      <text x="30" y="18" font-size="12" font-weight="600" letter-spacing="1.2" fill="#A8C8F0">NOTICE FSM-N06</text>
+    </g>
+
+    <text x="80" y="164" font-size="44" font-weight="700" fill="#FFFFFF">MAS Cyber Hygiene</text>
+    <text x="80" y="206" font-size="21" fill="#8FA6C8">Six binding requirements. Assessed continuously, not annually.</text>
+
+    <g>
+      <g transform="translate(80,258)">
+        <rect width="330" height="104" rx="12" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.11"/>
+        <rect x="0" y="0" width="3" height="104" rx="1.5" fill="url(#pill)"/>
+        <text x="24" y="34" font-size="13" font-weight="700" fill="#7FB3F0">01</text>
+        <text x="24" y="62" font-size="19" font-weight="600" fill="#FFFFFF">Administrative accounts</text>
+        <text x="24" y="85" font-size="14" fill="#8FA6C8">Every privileged account secured</text>
+      </g>
+      <g transform="translate(435,258)">
+        <rect width="330" height="104" rx="12" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.11"/>
+        <rect x="0" y="0" width="3" height="104" rx="1.5" fill="url(#pill)"/>
+        <text x="24" y="34" font-size="13" font-weight="700" fill="#7FB3F0">02</text>
+        <text x="24" y="62" font-size="19" font-weight="600" fill="#FFFFFF">Security patches</text>
+        <text x="24" y="85" font-size="14" fill="#8FA6C8">Applied in a timely manner</text>
+      </g>
+      <g transform="translate(790,258)">
+        <rect width="330" height="104" rx="12" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.11"/>
+        <rect x="0" y="0" width="3" height="104" rx="1.5" fill="url(#pill)"/>
+        <text x="24" y="34" font-size="13" font-weight="700" fill="#7FB3F0">03</text>
+        <text x="24" y="62" font-size="19" font-weight="600" fill="#FFFFFF">Security standards</text>
+        <text x="24" y="85" font-size="14" fill="#8FA6C8">A baseline, written and enforced</text>
+      </g>
+
+      <g transform="translate(80,382)">
+        <rect width="330" height="104" rx="12" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.11"/>
+        <rect x="0" y="0" width="3" height="104" rx="1.5" fill="url(#pill)"/>
+        <text x="24" y="34" font-size="13" font-weight="700" fill="#7FB3F0">04</text>
+        <text x="24" y="62" font-size="19" font-weight="600" fill="#FFFFFF">Network perimeter defence</text>
+        <text x="24" y="85" font-size="14" fill="#8FA6C8">Unauthorised traffic restricted</text>
+      </g>
+      <g transform="translate(435,382)">
+        <rect width="330" height="104" rx="12" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.11"/>
+        <rect x="0" y="0" width="3" height="104" rx="1.5" fill="url(#pill)"/>
+        <text x="24" y="34" font-size="13" font-weight="700" fill="#7FB3F0">05</text>
+        <text x="24" y="62" font-size="19" font-weight="600" fill="#FFFFFF">Malware protection</text>
+        <text x="24" y="85" font-size="14" fill="#8FA6C8">On every system where available</text>
+      </g>
+      <g transform="translate(790,382)">
+        <rect width="330" height="104" rx="12" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.11"/>
+        <rect x="0" y="0" width="3" height="104" rx="1.5" fill="url(#pill)"/>
+        <text x="24" y="34" font-size="13" font-weight="700" fill="#7FB3F0">06</text>
+        <text x="24" y="62" font-size="19" font-weight="600" fill="#FFFFFF">Multi-factor authentication</text>
+        <text x="24" y="85" font-size="14" fill="#8FA6C8">Admin and internet-facing accounts</text>
+      </g>
+    </g>
+
+    <line x1="80" y1="530" x2="1120" y2="530" stroke="#FFFFFF" stroke-opacity="0.1"/>
+    <text x="80" y="566" font-size="17" font-weight="600" fill="#FFFFFF">Netability Singapore</text>
+    <text x="80" y="589" font-size="13" fill="#7189AB">Continuous mapping, scoring and board-ready reporting</text>
+    <text x="1120" y="576" font-size="13" text-anchor="end" fill="#7189AB">netability.sg</text>
+  </g>
+</svg>
