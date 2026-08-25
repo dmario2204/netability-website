@@ -23,8 +23,19 @@ const esc = (s) => String(s ?? '')
   .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 
 // "2026-08-25-mas-cyber-hygiene.md" -> "mas-cyber-hygiene"
+// Strips the date prefix, then reduces everything to plain a-z0-9 and hyphens
+// so the URL stays clean when shared. Em-dashes, accents, apostrophes and
+// other punctuation the CMS may leave in a filename all become hyphens.
 function baseSlug(filename) {
-  return filename.replace(/\.md$/, '').replace(/^\d{4}-\d{2}-\d{2}-/, '');
+  return filename
+    .replace(/\.md$/, '')
+    .replace(/^\d{4}-\d{2}-\d{2}-/, '')
+    .normalize('NFKD')                 // separate accents from letters
+    .replace(/[̀-ͯ]/g, '')   // drop the accent marks
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')       // anything else becomes a hyphen
+    .replace(/-+/g, '-')               // collapse runs of hyphens
+    .replace(/^-|-$/g, '');            // trim hyphens from the ends
 }
 
 // Cover images are stored by the CMS as "/images/news/x.png" (absolute).
