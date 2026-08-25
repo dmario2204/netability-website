@@ -2,7 +2,7 @@
 title: 'MAS FAA-N16 voice recording amendments: what financial advisers must do before the deadline'
 author: Netability Singapore
 author_title: IT Cyber Security, Cloud & MAS Compliance
-date: 2026-08-24T16:00
+date: 2026-07-13T16:00
 category: Compliance update
 tags:
   - MAS Compliance
