@@ -8,7 +8,7 @@ tags:
   - MAS Compliance
   - FAA-N16
   - Voice Recording
-image: ''
+image: /images/news/mas-faa-n16-voice-recording.svg
 cta_text: Learn about our voice recording solution
 cta_link: voice-recording.html
 ---
