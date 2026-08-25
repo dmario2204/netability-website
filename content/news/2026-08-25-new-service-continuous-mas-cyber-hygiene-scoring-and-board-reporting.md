@@ -2,7 +2,7 @@
 title: 'New service: continuous MAS Cyber Hygiene scoring and board reporting'
 author: Netability Singapore
 author_title: IT Security, Cloud & MAS Compliance
-date: 2026-08-25T10:00
+date: 2026-08-24T10:00
 category: Company news
 tags:
   - MAS Compliance, Cybersecurity, Cyber Hygiene
