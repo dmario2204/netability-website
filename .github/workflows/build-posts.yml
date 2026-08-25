@@ -40,6 +40,11 @@ jobs:
           if git diff --staged --quiet; then
             echo "posts.json and post pages are already up to date."
           else
-            git commit -m "chore: rebuild posts.json and post pages [skip ci]"
+            # NOTE: do not put "[skip ci]" in this message. Cloudflare Pages
+            # honours that marker too and would skip deploying the new pages.
+            # This workflow can't re-trigger itself anyway — it only listens to
+            # content/news/, scripts/ and .github/workflows/, none of which the
+            # commit below touches.
+            git commit -m "chore: rebuild posts.json and post pages"
             git push
           fi
