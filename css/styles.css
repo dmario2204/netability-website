@@ -579,3 +579,48 @@ footer{background:var(--text);color:#fff;padding:3rem 2rem 2rem}
 @media(max-width:768px){
   .hero-visual{width:100%;display:flex;align-items:center;justify-content:flex-end;padding:0}
 }
+
+/* ══════════════════════════════════════════
+   POSTS FEED — full width, aligned with the site header
+   Paste this at the very END of css/styles.css
+══════════════════════════════════════════ */
+
+/* Match the 1200px container used by the nav and every other section */
+.posts-feed{
+  max-width:1200px;
+  margin:0 auto;
+  padding:3rem 2rem 5rem;
+}
+
+/* The "Sharing what we're learning…" bar spans the full width */
+.posts-compose{
+  max-width:none;
+}
+
+/* Two columns of cards. Each card stays a comfortable reading width,
+   while the feed as a whole lines up with the header. */
+#posts-container{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1.5rem;
+  align-items:start;      /* cards keep their natural height, no stretching */
+}
+
+/* Spacing now comes from the grid gap, not from each card */
+.post-card{
+  margin-bottom:0;
+}
+
+/* Loading spinner and "no posts" message should span both columns */
+.posts-loading,
+.posts-empty{
+  grid-column:1 / -1;
+}
+
+/* Tablet and below — one column, still full width */
+@media(max-width:900px){
+  #posts-container{
+    grid-template-columns:1fr;
+    gap:1.25rem;
+  }
+}
