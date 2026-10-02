@@ -6,7 +6,7 @@ date: 2026-10-02T09:46
 category: Regulatory update
 tags:
   - MAS, FAA-N16, voice recording, financial advisers, compliance
-image: /images/news/post-tprm-cover.png
+image: /images/news/post-faa-n16-cover.png
 cta_text: Review your FAA-N16 readiness with us
 cta_link: https://www.netability.sg/voice-recording.html
 ---
