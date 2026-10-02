@@ -5,7 +5,10 @@ author_title: IT Security, Cloud & MAS Compliance
 date: 2026-10-27T10:39
 category: Regulatory update
 tags:
-  - MAS, third-party risk, TPRM, outsourcing, vendor management, compliance
+  - MAS Compliance
+  - Third-Party Risk
+  - Outsourcing
+  - Technology Risk
 image: /images/news/post-tprm-cover.png
 cta_text: Map your third-party exposure before the clock starts
 cta_link: https://www.netability.sg/mas-trm-compliance.html
