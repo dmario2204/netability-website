@@ -5,7 +5,9 @@ author_title: IT Security, Cloud & MAS Compliance
 date: 2026-08-24T10:00
 category: Company news
 tags:
-  - MAS Compliance, Cybersecurity, Cyber Hygiene, CMS
+  - MAS Compliance
+  - Cyber Hygiene
+  - Cybersecurity
 image: /images/news/mas-cyber-hygiene-domains.svg
 cta_text: Book a cyber hygiene review
 cta_link: mas-trm-compliance.html
