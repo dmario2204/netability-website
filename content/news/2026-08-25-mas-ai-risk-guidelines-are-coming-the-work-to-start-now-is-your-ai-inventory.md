@@ -5,7 +5,9 @@ author_title: IT Security, Cloud & MAS Compliance
 date: 2026-09-08T10:34
 category: Regulatory update
 tags:
-  - MAS Compliance, AI Risk, Technology Risk
+  - MAS Compliance
+  - AI Risk
+  - Technology Risk
 image: /images/news/mas-ai-risk-timeline.svg
 cta_text: Talk to us about AI risk
 cta_link: mas-trm-compliance.html
