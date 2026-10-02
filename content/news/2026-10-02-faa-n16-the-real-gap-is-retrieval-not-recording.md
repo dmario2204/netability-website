@@ -2,10 +2,12 @@
 title: 'FAA-N16: the real gap is retrieval, not recording'
 author: Netability Singapore
 author_title: IT Security, Cloud & MAS Compliance
-date: 2026-10-02T09:46
+date: 2026-10-02T01:46
 category: Regulatory update
 tags:
-  - MAS, FAA-N16, voice recording, financial advisers, compliance
+  - MAS Compliance
+  - FAA-N16
+  - Voice Recording
 image: /images/news/post-faa-n16-cover.png
 cta_text: Review your FAA-N16 readiness with us
 cta_link: https://www.netability.sg/voice-recording.html
