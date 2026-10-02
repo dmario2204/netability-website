@@ -5,7 +5,9 @@ author_title: IT Security, Cloud & MAS Compliance
 date: 2026-10-12T09:50
 category: Security insight
 tags:
-  - AI Risk · Cybersecurity · Zero Trust · Ai agent
+  - AI Risk
+  - Cybersecurity
+  - Zero Trust
 image: /images/news/pasted-image-1790157562819.png
 cta_text: Review your AI agent access
 cta_link: cybersecurity.html
