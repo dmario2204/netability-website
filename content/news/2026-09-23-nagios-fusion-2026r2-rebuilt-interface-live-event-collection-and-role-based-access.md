@@ -5,7 +5,9 @@ author_title: IT Security, Cloud & MAS Compliance
 date: 2026-09-24T10:30
 category: Partner news
 tags:
-  - Nagios,Network Monitoring,Partner News
+  - Nagios
+  - Network Monitoring
+  - Partner News
 image: /images/news/Pardot_Email_ImagesIcons_Cont.___2026_09_10T101648.334.png
 cta_text: Talk to us about Nagios
 cta_link: network-monitoring.html
