@@ -97,7 +97,9 @@
     "date": "2026-08-24T10:00:00.000Z",
     "category": "Company news",
     "tags": [
-      "MAS Compliance, Cybersecurity, Cyber Hygiene, CMS"
+      "MAS Compliance",
+      "Cyber Hygiene",
+      "Cybersecurity"
     ],
     "image": "/images/news/mas-cyber-hygiene-domains.svg",
     "cta_text": "Book a cyber hygiene review",
