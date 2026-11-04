@@ -135,6 +135,41 @@ for (const p of posts) delete p._file;
 
 await writeFile(OUT_JSON, JSON.stringify(posts, null, 2) + '\n');
 
+// ── feed.xml — RSS for LinkedIn automation (Zapier/Make/Buffer) ─────────────
+// Only posts whose date has passed are included, so a scheduled post reaches
+// LinkedIn on its publish date, not the day it was written. The scheduled run
+// in build-posts.yml rebuilds this file every hour so due posts appear.
+
+const xmlEsc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;')
+  .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const now = Date.now();
+const live = posts.filter((p) => p.date && new Date(p.date).getTime() <= now).slice(0, 20);
+const items = live.map((p) => {
+  const link = SITE + p.url;
+  const img  = absoluteUrl(p.image);
+  return `    <item>
+      <title>${xmlEsc(p.title)}</title>
+      <link>${xmlEsc(link)}</link>
+      <guid isPermaLink="true">${xmlEsc(link)}</guid>
+      <pubDate>${new Date(p.date).toUTCString()}</pubDate>
+      <description>${xmlEsc(excerpt(p.body, 280))}</description>
+      ${p.category ? `<category>${xmlEsc(p.category)}</category>` : ''}
+      <enclosure url="${xmlEsc(img)}" type="image/${/\.svg$/i.test(img) ? 'svg+xml' : /\.jpe?g$/i.test(img) ? 'jpeg' : 'png'}" length="0"/>
+    </item>`;
+}).join('\n');
+await writeFile('feed.xml', `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Netability Singapore — Posts</title>
+    <link>${SITE}/posts.html</link>
+    <atom:link href="${SITE}/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Insights and updates on IT security, cloud and MAS compliance from Netability Singapore.</description>
+    <language>en-sg</language>
+${items}
+  </channel>
+</rss>
+`);
+
 // ── build one page per post ─────────────────────────────────────────────────
 
 await rm(OUT_DIR, { recursive: true, force: true });   // drop pages for deleted posts
