@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Netability Singapore — Posts</title>
+    <link>https://www.netability.sg/posts.html</link>
+    <atom:link href="https://www.netability.sg/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Insights and updates on IT security, cloud and MAS compliance from Netability Singapore.</description>
+    <language>en-sg</language>
+    <item>
+      <title>Nagios 2026R2: what landed across XI, Log Server, Network Analyzer and Fusion</title>
+      <link>https://www.netability.sg/posts/nagios-2026r2-what-landed-across-xi-log-server-network-analyzer-and-fusion.html</link>
+      <guid isPermaLink="true">https://www.netability.sg/posts/nagios-2026r2-what-landed-across-xi-log-server-network-analyzer-and-fusion.html</guid>
+      <pubDate>Mon, 02 Nov 2026 01:00:00 GMT</pubDate>
+      <description>Nagios has published the on-demand recording of its 2026R2 round-up webinar, held on 29 October. It walks through the September releases across all four commercial products, and it is the fastest way to see what changed without reading four changelogs.</description>
+      <category>Partner news</category>
+      <enclosure url="https://www.netability.sg/images/news/Oct-R2-webinar-website-1200x630.png" type="image/png" length="0"/>
+    </item>
+    <item>
+      <title>Your outsourcing register is about to become a third-party register</title>
+      <link>https://www.netability.sg/posts/your-outsourcing-register-is-about-to-become-a-third-party-register.html</link>
+      <guid isPermaLink="true">https://www.netability.sg/posts/your-outsourcing-register-is-about-to-become-a-third-party-register.html</guid>
+      <pubDate>Tue, 27 Oct 2026 10:39:00 GMT</pubDate>
+      <description>On 6 March 2026 MAS issued Consultation Paper P004-2026, proposing Guidelines on Third-Party Risk Management. The consultation closed on 20 April 2026 and the final Guidelines are still pending. When they are issued, the proposed transition period is six months.</description>
+      <category>Regulatory update</category>
+      <enclosure url="https://www.netability.sg/images/news/post-tprm-cover.png" type="image/png" length="0"/>
+    </item>
+    <item>
+      <title>Your AI agents hold credentials — do you know what they can reach?</title>
+      <link>https://www.netability.sg/posts/your-ai-agents-hold-credentials-do-you-know-what-they-can-reach.html</link>
+      <guid isPermaLink="true">https://www.netability.sg/posts/your-ai-agents-hold-credentials-do-you-know-what-they-can-reach.html</guid>
+      <pubDate>Mon, 12 Oct 2026 09:50:00 GMT</pubDate>
+      <description>For two years the question about AI was what a model might say. That question has moved on. Agents now act — reading mail, querying systems, calling APIs, making changes. They hold credentials. The risk is no longer a bad answer; it is an unauthorised action taken at machine spe…</description>
+      <category>Security insight</category>
+      <enclosure url="https://www.netability.sg/images/news/pasted-image-1790157562819.png" type="image/png" length="0"/>
+    </item>
+    <item>
+      <title>FAA-N16: the real gap is retrieval, not recording</title>
+      <link>https://www.netability.sg/posts/faa-n16-the-real-gap-is-retrieval-not-recording.html</link>
+      <guid isPermaLink="true">https://www.netability.sg/posts/faa-n16-the-real-gap-is-retrieval-not-recording.html</guid>
+      <pubDate>Fri, 02 Oct 2026 01:46:00 GMT</pubDate>
+      <description>FAA-N16 (Amendment) 2025 took effect on 29 December 2025. Licensed and exempt financial advisers must audio-record pre-transaction call-backs to Selected Clients and to clients of Selected Representatives, and the Notice now prescribes what those call-backs have to cover.</description>
+      <category>Regulatory update</category>
+      <enclosure url="https://www.netability.sg/images/news/post-faa-n16-cover.png" type="image/png" length="0"/>
+    </item>
+    <item>
+      <title>Nagios Fusion 2026R2: rebuilt interface, live event collection and role-based access</title>
+      <link>https://www.netability.sg/posts/nagios-fusion-2026r2-rebuilt-interface-live-event-collection-and-role-based-access.html</link>
+      <guid isPermaLink="true">https://www.netability.sg/posts/nagios-fusion-2026r2-rebuilt-interface-live-event-collection-and-role-based-access.html</guid>
+      <pubDate>Thu, 24 Sep 2026 10:30:00 GMT</pubDate>
+      <description>Nagios has released Fusion 2026R2, and it is the most substantial change to the product in years — a full rebuild on Laravel and React, with a redesigned interface, new dashboards and a role-based permission system.</description>
+      <category>Partner news</category>
+      <enclosure url="https://www.netability.sg/images/news/Pardot_Email_ImagesIcons_Cont.___2026_09_10T101648.334.png" type="image/png" length="0"/>
+    </item>
+    <item>
+      <title>MAS AI risk guidelines are coming - The work to start now is your AI inventory</title>
+      <link>https://www.netability.sg/posts/mas-ai-risk-guidelines-are-coming-the-work-to-start-now-is-your-ai-inventory.html</link>
+      <guid isPermaLink="true">https://www.netability.sg/posts/mas-ai-risk-guidelines-are-coming-the-work-to-start-now-is-your-ai-inventory.html</guid>
+      <pubDate>Tue, 08 Sep 2026 10:34:00 GMT</pubDate>
+      <description>MAS issued its consultation paper on Guidelines for AI Risk Management in November 2025. The consultation closed on 31 January 2026, and this month MAS Chairman and Deputy Prime Minister Gan Kim Yong said the Guidelines will be finalised soon.</description>
+      <category>Regulatory update</category>
+      <enclosure url="https://www.netability.sg/images/news/mas-ai-risk-timeline.svg" type="image/svg+xml" length="0"/>
+    </item>
+    <item>
+      <title>New service: continuous MAS Cyber Hygiene scoring and board reporting</title>
+      <link>https://www.netability.sg/posts/new-service-continuous-mas-cyber-hygiene-scoring-and-board-reporting.html</link>
+      <guid isPermaLink="true">https://www.netability.sg/posts/new-service-continuous-mas-cyber-hygiene-scoring-and-board-reporting.html</guid>
+      <pubDate>Mon, 24 Aug 2026 10:00:00 GMT</pubDate>
+      <description>We've launched a dedicated MAS Cyber Hygiene service for financial institutions in Singapore — continuous assessment across all six domains of the Notice, with scored reports ready for management and board review at any time.</description>
+      <category>Company news</category>
+      <enclosure url="https://www.netability.sg/images/news/mas-cyber-hygiene-domains.svg" type="image/svg+xml" length="0"/>
+    </item>
+    <item>
+      <title>SSL/TLS certificates are getting shorter — here's the timeline to 47 days</title>
+      <link>https://www.netability.sg/posts/ssl-tls-certificates-are-getting-shorter-here-s-the-timeline-to-47-days.html</link>
+      <guid isPermaLink="true">https://www.netability.sg/posts/ssl-tls-certificates-are-getting-shorter-here-s-the-timeline-to-47-days.html</guid>
+      <pubDate>Wed, 08 Jul 2026 13:49:00 GMT</pubDate>
+      <description>The industry is phasing out long-lived SSL/TLS certificates. Following CA/Browser Forum Ballot SC-081v3 — approved in April 2025 — the maximum validity of a public certificate drops from 398 days today to just 47 days by 2029.</description>
+      <category>Security insight</category>
+      <enclosure url="https://www.netability.sg/images/news/ssl-certificate-validity-timeline.png" type="image/png" length="0"/>
+    </item>
+    <item>
+      <title>MAS FAA-N16 voice recording amendments: what financial advisers must do before the deadline</title>
+      <link>https://www.netability.sg/posts/mas-faa-n16-voice-recording.html</link>
+      <guid isPermaLink="true">https://www.netability.sg/posts/mas-faa-n16-voice-recording.html</guid>
+      <pubDate>Sun, 28 Jun 2026 16:00:00 GMT</pubDate>
+      <description>The Monetary Authority of Singapore amended Notice FAA-N16 on 29 December 2025, tightening requirements for the recording and retention of client communications. Licensed and exempt financial advisers now face clearer obligations around mobile call capture and audit trails.</description>
+      <category>Compliance update</category>
+      <enclosure url="https://www.netability.sg/images/news/mas-faa-n16-voice-recording.svg" type="image/svg+xml" length="0"/>
+    </item>
+    <item>
+      <title>Why network microsegmentation stops ransomware where firewalls can't</title>
+      <link>https://www.netability.sg/posts/network-microsegmentation.html</link>
+      <guid isPermaLink="true">https://www.netability.sg/posts/network-microsegmentation.html</guid>
+      <pubDate>Thu, 18 Jun 2026 09:00:00 GMT</pubDate>
+      <description>Traditional perimeter security assumes threats come from outside. But once an attacker is inside your network, a flat network lets them move laterally to critical systems within minutes.</description>
+      <category>Security insight</category>
+      <enclosure url="https://www.netability.sg/images/og-image.jpg" type="image/jpeg" length="0"/>
+    </item>
+    <item>
+      <title>Netability marks over 20 years of IT engineering across Singapore, Switzerland and Hong Kong</title>
+      <link>https://www.netability.sg/posts/twenty-years.html</link>
+      <guid isPermaLink="true">https://www.netability.sg/posts/twenty-years.html</guid>
+      <pubDate>Fri, 05 Jun 2026 09:00:00 GMT</pubDate>
+      <description>Since 2003, we've grown from a Swiss-born system integrator into a trusted partner for Singapore enterprises and MAS-regulated financial institutions. Our approach hasn't changed: honesty, team spirit, and trust — the Neta-Way.</description>
+      <category>Company news</category>
+      <enclosure url="https://www.netability.sg/images/og-image.jpg" type="image/jpeg" length="0"/>
+    </item>
+  </channel>
+</rss>
